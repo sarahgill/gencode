@@ -15,7 +15,6 @@ sealed class ComparisonOverride : ExecutionOverride<BooleanVar, Comparison<*>> {
             val value = executable.execute(scope, output).value
             return BooleanVar[!value]
         }
-
     }
 
     object OrEqualToMistake : ComparisonOverride() {
@@ -31,7 +30,20 @@ sealed class ComparisonOverride : ExecutionOverride<BooleanVar, Comparison<*>> {
             }
             return executable.withCompType(comparison).execute(scope, output)
         }
-
     }
 
+    object MisreadSignMistake : ComparisonOverride() {
+
+        override fun execute(executable: Comparison<*>, scope: Scope, output: MutableOutput?, executor: Executor): BooleanVar {
+            val comparison = when (executable.type) {
+                Comparison.Type.LESS_THAN -> Comparison.Type.GREATER_THAN
+                Comparison.Type.LESS_THAN_EQUAL_TO -> Comparison.Type.GREATER_THAN_EQUAL_TO
+                Comparison.Type.EQUAL_TO -> Comparison.Type.EQUAL_TO
+                Comparison.Type.NOT_EQUAL_TO -> Comparison.Type.NOT_EQUAL_TO
+                Comparison.Type.GREATER_THAN_EQUAL_TO -> Comparison.Type.LESS_THAN_EQUAL_TO
+                Comparison.Type.GREATER_THAN -> Comparison.Type.LESS_THAN
+            }
+            return executable.withCompType(comparison).execute(scope, output)
+        }
+    }
 }

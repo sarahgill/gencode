@@ -58,6 +58,7 @@ class CodeGenerator private constructor(
         builder.setDifficulty(difficulty)
         rootRecord.addPattern(nestPattern)
 
+        // update name here for method calling:
         val main = JFunction(VarType.INT, "example")
         DeclarationProvider.populate(main.body, rootRecord, context)
         context.mainIntVar = rootRecord.getRandVar(VarType.INT)

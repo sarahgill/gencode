@@ -1,10 +1,12 @@
 package com.troystopera.gencode;
 
 import com.troystopera.gencode.generator.CodeGenerator;
+import com.troystopera.gencode.generator.distractors.DistractorGenerator;
 import com.troystopera.jkode.exec.Executor;
 import com.troystopera.jkode.exec.Output;
 import com.troystopera.jkode.format.JavaFormat;
 
+import java.lang.*;
 import java.util.*;
 
 /**
@@ -31,6 +33,7 @@ public class Main {
         System.out.println("-------\n");
 
         CodeGenerator generator = new CodeGenerator(topics);
+
         int problemNum = 1;
         for (Problem problem : generator.generate(difficultyLow, difficultyHigh, count)) {
             System.out.println("Problem: " + problemNum);
@@ -38,10 +41,27 @@ public class Main {
 
             Executor exec = new Executor();
             Output output = exec.execute(problem.getMainFunction());
-            System.out.println("Answer: " + output.getReturnVar().toString());
+            DistractorGenerator dist = new DistractorGenerator(problem);
+            List<String> distractors = dist.getDistractors(3);
+
+            // generate a random number from 0-3 to choose which spot the correct answer goes in list
+            int rand = (int) (Math.random() * 4);
+            count = 0;
+            String returnVal = output.getReturnVar().toString();
+            System.out.print("Answer choices: ");
+            for (String s: distractors) {
+                if (count == rand) {
+                    System.out.print(returnVal + " ");
+                }
+                System.out.print(s + " ");
+                count++;
+            }
+            if (rand == 3) {
+                System.out.print(returnVal);
+            }
+            System.out.println("\nCorrect answer: " + returnVal);
             System.out.println("\n\n");
             problemNum++;
         }
     }
-
 }

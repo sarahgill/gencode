@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jKode-jvm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

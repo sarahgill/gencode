@@ -27,43 +27,64 @@ class DistractorGenerator(private val problem: Problem) {
             overrideExec = OverrideExecutor()
             overrideExec.addOverride(Watchable(ForLoop::class), ForLoopOverride.SkipFirst)
             val result = overrideExec.execute(problem.mainFunction).getReturnVar() as? T ?: nullVar
-            if (result.toString() != correct.toString())
+            if (result.toString() != correct.toString()) {
                 distractors.add(result.toString())
+            }
         }
 
         // now try comparison overrides
-
         overrideExec = OverrideExecutor()
         overrideExec.addOverride(Watchable(Comparison::class), ComparisonOverride.InvertedBoolean)
         var result = overrideExec.execute(problem.mainFunction).getReturnVar() as? T ?: nullVar
-        if (result.toString() != correct.toString())
+        if (result.toString() != correct.toString()) {
             distractors.add(result.toString())
+        }
 
         overrideExec = OverrideExecutor()
         overrideExec.addOverride(Watchable(Comparison::class), ComparisonOverride.OrEqualToMistake)
         result = overrideExec.execute(problem.mainFunction).getReturnVar() as? T ?: nullVar
-        if (result.toString() != correct.toString())
+        if (result.toString() != correct.toString()) {
             distractors.add(result.toString())
+        }
+
+        overrideExec = OverrideExecutor()
+        overrideExec.addOverride(Watchable(Comparison::class), ComparisonOverride.MisreadSignMistake)
+        result = overrideExec.execute(problem.mainFunction).getReturnVar() as? T ?: nullVar
+        if (result.toString() != correct.toString()) {
+            distractors.add(result.toString())
+        }
 
         // ensure the number of distractors is sufficient
-        if (distractors.size < count) when (correct) {
-            is IntVar -> fillList(count, correct, distractors)
-            else -> TODO("take into consideration return types other than int")
+
+        if (distractors.size < count) {
+            var newDistractors = when (correct) {
+                is IntVar -> fillList(count, correct, distractors)
+                else -> TODO("take into consideration return types other than int")
+            }
+            val iterate = newDistractors.listIterator()
+            while (iterate.hasNext()) {
+                distractors.add(iterate.next())
+            }
         }
 
         // ensure the number of distractors is not too high
         return distractors.take(count)
     }
 
-    private fun fillList(count: Int, correct: IntVar, currentDistractors: MutableSet<String>) {
+    private fun fillList(count: Int, correct: IntVar, currentDistractors: MutableSet<String>): MutableList<String> {
         val strings = mutableListOf<String>()
-        var delta = 1 + random.nextInt(3)
+        var delta = 1 + random.nextInt(10)
+        var size = currentDistractors.size
 
-        while (currentDistractors.size < count) {
-            strings.add((count + delta).toString())
-            delta += 1 + random.nextInt(3)
+        while (size < count) {
+            var temp = (count + delta).toString()
+            if (temp != correct.toString()) {
+                strings.add((count + delta).toString())
+                size++
+            }
+            delta += 1 + random.nextInt(10)
             delta *= -1
         }
+        return strings
     }
-
 }
