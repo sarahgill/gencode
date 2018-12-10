@@ -64,7 +64,7 @@ class CodeGenerator private constructor(
         context.mainIntVar = rootRecord.getRandVar(VarType.INT)
         main.body.add(BlankLine)
         populate(main.body, rootRecord, context, nestPattern)
-        //add a default return to ensure a complete program
+        // add a default return to ensure a complete program
         if (context.mainArray != null) {
             val array = context.mainArray!!
             val length = rootRecord.getArrLength(array)
