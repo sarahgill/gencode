@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7403936-9e79-4103-8eba-fb018cba00ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/DistractorGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/CodeGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/CodeGenerator.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/DistractorGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/DistractorGenerator.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -53,7 +50,7 @@
           <entry key="class" value="15" />
           <entry key="groovy" value="1" />
           <entry key="java" value="667" />
-          <entry key="kt" value="1766" />
+          <entry key="kt" value="1787" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
@@ -61,7 +58,7 @@
         <counts>
           <entry key="CLASS" value="15" />
           <entry key="JAVA" value="667" />
-          <entry key="Kotlin" value="1766" />
+          <entry key="Kotlin" value="1787" />
           <entry key="Scratch" value="1" />
           <entry key="XML" value="2" />
         </counts>
@@ -85,8 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/DistractorGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+            <state relative-caret-position="136">
+              <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
               <folding>
                 <element signature="e#55#448#0" expanded="true" />
               </folding>
@@ -222,11 +219,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="714" />
+    <option name="height" value="720" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -530,7 +527,7 @@
     <property name="SearchEverywhereHistoryKey" value="NullVarEx&#9;null&#9;null&#10;Manipulation&#9;null&#9;null&#10;PsiB&#9;PSI&#9;JAVA://javafx.scene.control.TitledPane.StyleableProperties#COLLAPSIBLE&#10;plugin&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/plugin.jar!/sun/plugin" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544422910950" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544466819978" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -550,11 +547,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (4)">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
       <module name="gencode" />
-      <option name="PROGRAM_PARAMETERS" value="0 1 100 ARRAY" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 50 FOR_LOOP" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.troystopera.gencode.*" />
@@ -568,21 +565,7 @@
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
       <module name="gencode" />
-      <option name="PROGRAM_PARAMETERS" value="0 1 100 FOR_LOOP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.troystopera.gencode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
-      <module name="gencode" />
-      <option name="PROGRAM_PARAMETERS" value="0 1 100 CONDITIONAL" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 10 ARRAY" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.troystopera.gencode.*" />
@@ -607,10 +590,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
+      <module name="gencode" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 10 CONDITIONAL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.troystopera.gencode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
       <module name="gencode" />
-      <option name="PROGRAM_PARAMETERS" value="0 1 50 FOR_LOOP" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 10 FOR_LOOP" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.troystopera.gencode.*" />
@@ -622,19 +619,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main (4)" />
+      <item itemvalue="Application.Main (5)" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (2)" />
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="Application.Main (3)" />
-      <item itemvalue="Application.Main (4)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (4)" />
-        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (5)" />
+        <item itemvalue="Application.Main (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -649,12 +646,12 @@
       <option name="presentableId" value="Default" />
       <updated>1543421871795</updated>
       <workItem from="1543421876441" duration="150000" />
-      <workItem from="1543435102089" duration="48831000" />
+      <workItem from="1543435102089" duration="50623000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48981000" />
+    <option name="totallyTimeSpent" value="50773000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -666,9 +663,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="23" width="1280" height="720" extended-state="6" />
+    <frame x="-1" y="23" width="1280" height="720" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18578352" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18578352" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -679,7 +676,7 @@
       <window_info anchor="bottom" id="Analyze Dataflow to" weight="0.55592656" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.112396695" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.52396697" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.43140495" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1058,8 +1055,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/DistractorGenerator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        <state relative-caret-position="136">
+          <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
           <folding>
             <element signature="e#55#448#0" expanded="true" />
           </folding>

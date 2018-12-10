@@ -80,14 +80,14 @@ class DistractorGenerator(private val problem: Problem) {
         var delta = 1 + random.nextInt(10) + correct.toString().toInt()
         var size = currentDistractors.size
 
-        while (size < count) {
+        while (size <= count) {
             val temp = (count + delta).toString()
             if (temp != correct.toString()) {
-                strings.add((count + delta).toString())
+                strings.add(delta.toString())
                 size++
             }
             delta += 1 + random.nextInt(10)
-            delta *= -1
+            // delta *= -1
         }
         return strings
     }
