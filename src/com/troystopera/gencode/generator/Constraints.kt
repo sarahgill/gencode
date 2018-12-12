@@ -19,5 +19,4 @@ internal const val MIN_OPERATIONS = 1
 internal const val MAX_OPERATIONS = 1
 
 /* Random Operations */
-internal const val THRESHOLD_OP_TYPE_MULT_DIV = 0.4
 internal const val THRESHOLD_OP_TYPE_MOD = 0.7

@@ -5,6 +5,7 @@ import com.troystopera.gencode.ProblemTopic
 import com.troystopera.gencode.generator.*
 import com.troystopera.gencode.generator.GenScope
 import com.troystopera.gencode.generator.VarNameProvider
+import com.troystopera.gencode.generator.constraints.ForLoopConstraints
 import com.troystopera.gencode.generator.constraints.ManipulationConstraints
 import com.troystopera.jkode.Component
 import com.troystopera.jkode.Evaluation
@@ -51,8 +52,12 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
 
         //manipulate the return var if present and not in an array walk
         if (!scope.hasPattern(Pattern.ArrayWalk::class) && context.mainIntVar != null) {
-            if (scope.isIn(ForLoop::class))
+            if (scope.isIn(ForLoop::class)) {
                 parent.add(forLoopManip(context, scope))
+                if (ForLoopConstraints.haveMultipleStatements(context.random)) {
+                    parent.add(forLoopManip(context, scope))
+                }
+            }
             else
                 parent.add(Assignment(context.mainIntVar!!, genIntEvaluation(context, scope, context.mainIntVar!!)))
             count++
@@ -70,7 +75,7 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
         }
     }
 
-    //TODO consolidate array manipulations
+    // TODO consolidate array manipulations
     private fun genArrayManipulation(i: Evaluation<IntVar>?, scope: GenScope, context: GenContext): ArrayAssign<*> {
         val arr = scope.getRandVar(VarType.ARRAY[VarType.INT])!!
         val index = i ?: IntVar[context.random.randEasyInt(0, scope.getArrLength(arr) - 1)].asEval()
@@ -100,15 +105,14 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
 
     private fun forLoopManip(context: GenContext, scope: GenScope): Assignment {
         var opType = RandomTypes.operationType(context.random.difficulty, context.random)
-        //TODO find a better fix for divide by 0 and huge multiplication
-        if (opType == MathOperation.Type.DIVIDE || opType == MathOperation.Type.MODULO || opType == MathOperation.Type.MULTIPLY)
-            opType = MathOperation.Type.ADD
+        while (opType == MathOperation.Type.DIVIDE || opType == MathOperation.Type.MODULO) {  // TODO find a better fix for divide by 0 & % - allow it to be included here
+            opType = RandomTypes.operationType(context.random.difficulty, context.random)
+        }
         val op = MathOperation(
                 opType,
-                Variable(VarType.INT, context.mainIntVar!!),
+                Variable(VarType.INT, scope.getRandVar(VarType.INT)!!),
                 Variable(VarType.INT, scope.getRandUnmanipVar(VarType.INT)!!)
         )
         return Assignment(context.mainIntVar!!, op)
     }
-
 }
