@@ -5,6 +5,7 @@ import com.troystopera.gencode.ProblemTopic
 import com.troystopera.gencode.ProblemType
 import com.troystopera.gencode.generator.components.ConditionalProvider
 import com.troystopera.gencode.generator.components.ForLoopProvider
+import com.troystopera.gencode.generator.constraints.ManipulationConstraints
 import com.troystopera.gencode.generator.statements.DeclarationProvider
 import com.troystopera.gencode.generator.statements.ManipulationProvider
 import com.troystopera.jkode.BlankLine
@@ -14,6 +15,7 @@ import com.troystopera.jkode.components.CodeBlock
 import com.troystopera.jkode.components.ForLoop
 import com.troystopera.jkode.control.Return
 import com.troystopera.jkode.evaluations.ArrayAccess
+import com.troystopera.jkode.evaluations.MathOperation
 import com.troystopera.jkode.evaluations.Variable
 import com.troystopera.jkode.vars.IntVar
 import com.troystopera.jkode.vars.VarType
@@ -69,9 +71,19 @@ class CodeGenerator private constructor(
             val array = context.mainArray!!
             val length = rootRecord.getArrLength(array)
             main.body.add(Return(ArrayAccess(VarType.INT, Variable(VarType.ARRAY, array), IntVar[random.nextInt(length)].asEval())))
-        } else
-            main.body.add(Return(Variable(VarType.INT, context.mainIntVar ?: rootRecord.getRandVar(VarType.INT)!!)))
-        builder.setMainFunction(main)      //TODO change mainint var to something else
+        } else {
+            if (ManipulationConstraints.useMathOpInReturnValue(random)) {
+                // randomly choose operation
+                val opType = RandomTypes.operationType(random.difficulty, random)
+                main.body.add(Return(MathOperation(opType,
+                                    Variable(VarType.INT, context.mainIntVar!!),
+                                    Variable(VarType.INT, rootRecord.getRandVar(VarType.INT)!!)))
+                )
+            } else {
+                main.body.add(Return(Variable(VarType.INT, context.mainIntVar ?: rootRecord.getRandVar(VarType.INT)!!)))
+            }
+        }
+        builder.setMainFunction(main)
         return builder.build()
     }
 
