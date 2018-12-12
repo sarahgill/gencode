@@ -95,7 +95,7 @@ class CodeGenerator private constructor(
                 parent.add(result.component)
                 //setup initial values for temp variables
                 var temp = result.component as CodeBlock
-                var genScope = scope
+                var genScope = result.scope
                 //create proper number of nested loops
                 for (i in 1 until nestStructure.depth) {
                     result = ForLoopProvider.generate(genScope, context)
