@@ -71,7 +71,7 @@ class CodeGenerator private constructor(
             main.body.add(Return(ArrayAccess(VarType.INT, Variable(VarType.ARRAY, array), IntVar[random.nextInt(length)].asEval())))
         } else
             main.body.add(Return(Variable(VarType.INT, context.mainIntVar ?: rootRecord.getRandVar(VarType.INT)!!)))
-        builder.setMainFunction(main)
+        builder.setMainFunction(main)      //TODO change mainint var to something else
         return builder.build()
     }
 
@@ -83,7 +83,7 @@ class CodeGenerator private constructor(
                 parent.add(result.component)
                 //setup initial values for temp variables
                 var temp = result.component as CodeBlock
-                var genScope = scope
+                var genScope = result.scope
                 //create proper number of nested loops
                 for (i in 1 until nestStructure.depth) {
                     result = ForLoopProvider.generate(genScope, context)
