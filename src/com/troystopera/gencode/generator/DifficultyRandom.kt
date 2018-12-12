@@ -25,7 +25,7 @@ class DifficultyRandom(seed: Long) : Random(seed) {
 
     //probability more likely if difficulty high - probability never greater than 90%
     fun randHardBool(minProb: Double = difficulty) = nextDouble() < when {
-        difficulty > .9 -> .9
+        difficulty > .75 -> .75
         difficulty < minProb -> minProb
         else -> difficulty
     }
@@ -37,8 +37,7 @@ class DifficultyRandom(seed: Long) : Random(seed) {
     fun randInt(min: Int = 0, max: Int = 100) = min + if (min >= max) 0 else nextInt(max - min + 1)
 
     fun simpleInt(): Int {
-        val base = if (randBool()) 2 else 5
-        return base * randInt(1, 5)
+        return randInt(1, 25)
     }
 
     fun randEasyInt(min: Int = 0, max: Int = 100): Int {
@@ -48,5 +47,4 @@ class DifficultyRandom(seed: Long) : Random(seed) {
         val factor = nextInt(if (div <= 0) 1 else div)
         return easyMin + (5 * factor)
     }
-
 }
