@@ -25,8 +25,7 @@ sealed class NestStructure : Pattern.NestPattern() {
                 topics.contains(ProblemTopic.FOR_LOOP) -> when {
                     topics.contains(ProblemTopic.ARRAY) -> when {
                         difficulty < 0.50 -> SingleLoop
-                        difficulty < 0.75 -> NestedLoop(2)
-                        else -> NestedLoop(if (random.nextBoolean()) 2 else 3)
+                        else -> NestedLoop(2)
                     }
                     topics.contains(ProblemTopic.CONDITIONAL) -> {
                         if (difficulty < 0.25) ComboLoopConditional
@@ -38,10 +37,8 @@ sealed class NestStructure : Pattern.NestPattern() {
                         } else if (difficulty < 0.50) {
                             if (random.nextBoolean()) SingleLoop
                             else NestedLoop(2)
-                        } else if (difficulty < 0.75) {
-                            NestedLoop(2)
                         } else {
-                            NestedLoop(if (random.nextBoolean()) 2 else 3)
+                            NestedLoop(2)
                         }
                 }
                 topics.contains(ProblemTopic.CONDITIONAL) -> when {
