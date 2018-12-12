@@ -4,7 +4,7 @@ import java.util.*
 
 class DifficultyRandom(seed: Long) : Random(seed) {
 
-    var difficulty: Double = .5
+    var difficulty: Double = .5  //TODO update the way difficultly is set
         set (value) {
             field = when {
                 value > 1 -> 1.0
