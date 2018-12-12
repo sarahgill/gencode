@@ -74,10 +74,16 @@ class CodeGenerator private constructor(
         } else {
             if (ManipulationConstraints.useMathOpInReturnValue(random)) {
                 // randomly choose operation
-                val opType = RandomTypes.operationType(random.difficulty, random)
+                var opType = RandomTypes.operationType(random.difficulty, random)
+                val variable = rootRecord.getRandVar(VarType.INT)!!
+                if (variable.equals(context.mainIntVar!!)) {
+                    while (opType == MathOperation.Type.DIVIDE || opType == MathOperation.Type.MODULO || opType == MathOperation.Type.SUBTRACT) {
+                        opType = RandomTypes.operationType(random.difficulty, random)
+                    }
+                }
                 main.body.add(Return(MathOperation(opType,
                                     Variable(VarType.INT, context.mainIntVar!!),
-                                    Variable(VarType.INT, rootRecord.getRandVar(VarType.INT)!!)))
+                                    Variable(VarType.INT, variable)))
                 )
             } else {
                 main.body.add(Return(Variable(VarType.INT, context.mainIntVar ?: rootRecord.getRandVar(VarType.INT)!!)))
