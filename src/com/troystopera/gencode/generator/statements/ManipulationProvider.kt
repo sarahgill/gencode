@@ -53,10 +53,13 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
         //manipulate the return var if present and not in an array walk
         if (!scope.hasPattern(Pattern.ArrayWalk::class) && context.mainIntVar != null) {
             if (scope.isIn(ForLoop::class)) {
-                parent.add(forLoopManip(context, scope))
                 if (ForLoopConstraints.haveMultipleStatements(context.random)) {
-                    parent.add(forLoopManip(context, scope))
+                    val manip = forLoopManip2(context, scope)
+                    if (manip != null) {
+                        parent.add(manip)
+                    }
                 }
+                parent.add(forLoopManip(context, scope))
             }
             else
                 parent.add(Assignment(context.mainIntVar!!, genIntEvaluation(context, scope, context.mainIntVar!!)))
@@ -114,5 +117,29 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
                 Variable(VarType.INT, scope.getRandUnmanipVar(VarType.INT)!!)
         )
         return Assignment(context.mainIntVar!!, op)
+    }
+
+    private fun forLoopManip2(context: GenContext, scope: GenScope): Assignment? {
+        var opType = RandomTypes.operationType(context.random.difficulty, context.random)
+        while (opType == MathOperation.Type.DIVIDE || opType == MathOperation.Type.MODULO) {  // TODO find a better fix for divide by 0 & % - allow it to be included here
+            opType = RandomTypes.operationType(context.random.difficulty, context.random)
+        }
+        val op = MathOperation(
+                opType,
+                Variable(VarType.INT, context.mainIntVar!!),
+                Variable(VarType.INT, scope.getRandUnmanipVar(VarType.INT)!!)
+        )
+        /* make sure random variable is not the main var
+           if it is, try to generate a different one
+           if it is still the main var, probably no other options - return null
+         */
+        var variable = scope.getRandVar(VarType.INT)!!
+        if (variable.equals(context.mainIntVar!!)) {
+            variable = scope.getRandVar(VarType.INT)!!
+            if (variable.equals(context.mainIntVar!!)) {
+                return null
+            }
+        }
+        return Assignment(variable, op)
     }
 }
