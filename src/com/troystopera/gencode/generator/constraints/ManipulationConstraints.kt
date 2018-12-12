@@ -11,4 +11,10 @@ object ManipulationConstraints {
 
     fun useDirectManipulation(random: DifficultyRandom) = random.difficulty < LEVEL_1
 
+    fun useMathOpInReturnValue(random: DifficultyRandom): Boolean {
+        if (random.difficulty >= 0.6) {
+            return random.randBool()
+        }
+        return false
+    }
 }
