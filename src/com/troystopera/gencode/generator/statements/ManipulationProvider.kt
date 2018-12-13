@@ -57,9 +57,11 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
                     val manip = forLoopManip2(context, scope)
                     if (manip != null) {
                         parent.add(manip)
+                        parent.add(forLoopManip(context, scope, manip.varName))
                     }
+                } else {
+                    parent.add(forLoopManip(context, scope))
                 }
-                parent.add(forLoopManip(context, scope))
             }
             else
                 parent.add(Assignment(context.mainIntVar!!, genIntEvaluation(context, scope, context.mainIntVar!!)))
@@ -114,6 +116,19 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
         val op = MathOperation(
                 opType,
                 Variable(VarType.INT, scope.getRandVar(VarType.INT)!!),
+                Variable(VarType.INT, scope.getRandUnmanipVar(VarType.INT)!!)
+        )
+        return Assignment(context.mainIntVar!!, op)
+    }
+
+    private fun forLoopManip(context: GenContext, scope: GenScope, variable: String): Assignment {
+        var opType = RandomTypes.operationType(context.random.difficulty, context.random)
+        while (opType == MathOperation.Type.DIVIDE || opType == MathOperation.Type.MODULO) {  // TODO find a better fix for divide by 0 & % - allow it to be included here
+            opType = RandomTypes.operationType(context.random.difficulty, context.random)
+        }
+        val op = MathOperation(
+                opType,
+                Variable(VarType.INT, variable),
                 Variable(VarType.INT, scope.getRandUnmanipVar(VarType.INT)!!)
         )
         return Assignment(context.mainIntVar!!, op)
