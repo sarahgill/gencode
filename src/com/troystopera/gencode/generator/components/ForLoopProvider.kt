@@ -48,16 +48,26 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
     private fun genDeclaration(varName: String, up: Boolean, context: GenContext, pattern: Pattern?): Declaration<IntVar> {
         //TODO utilize other variables in loop declaration
         val value: Evaluation<IntVar> = when (pattern) {
-        //array walk declaration if you are working with arrays and for_loops this sets it = 0 if up or array length if down
+            //array walk declaration if you are working with arrays and for_loops this sets it = 0 if up or array length if down
             is Pattern.ArrayWalk -> {
                 if (up) IntVar[0].asEval()
                 else MathOperation(MathOperation.Type.SUBTRACT, ArrayLength(Variable(VarType.ARRAY, pattern.arrayName)), IntVar[1].asEval())
             }
-        //default declaration
-        //increase the else randInt to make larger iterations
-        //if difficulty level is larger else statement random int (4,8)
-            else -> IntVar[if (up) context.random.randInt(0, 2) else if (context.random.difficulty < 0.5) context.random.randInt(3, 5) else context.random.randInt(5,10)].asEval()
+            //default declaration
+            //increase the else randInt to make larger iterations
+            //TODO ask simha if 10 loops is too many
+            else -> IntVar[if (up)
+                context.random.randInt(0, 2)
+            else if (context.random.difficulty < 0.25)
+                context.random.randInt(1, 5)
+            else if (context.random.difficulty < 0.50)
+                context.random.randInt(5, 10)
+            else if (context.random.difficulty < 0.75)
+                context.random.randInt(3, 3)
+            else context.random.randInt(4, 5)].asEval()
         }
+
+
         return Declaration(VarType.INT, varName, value)
     }
     //TODO make sure gen comparison doesnt equal gen declaration var
@@ -84,14 +94,19 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
                 else IntVar[0].asEval()
             }
         //default value
-        //also make sure that context.random.randInt =! gendeclaration random.randInt
+        //also make sure that context.random.randInt =! gendeclaration random.randInt //maybe make when statement
             else -> IntVar[if (up) {
-                if (context.random.difficulty < 0.5)
+
+                if (context.random.difficulty < 0.25)
                     context.random.randInt(3, 5)
+                else if (context.random.difficulty < .50)
+                     context.random.randInt(5,10)
+                else if(context.random.difficulty < .75)
+                     context.random.randInt(3,3)
                 else
-                    context.random.randInt(5, 10)
+                    context.random.randInt(4,5)
             }
-                     else context.random.randInt(0, 2)].asEval()
+            else context.random.randInt(0, 2)].asEval()
         }
         return Comparison(type, Variable(VarType.INT, varName), value)
     }

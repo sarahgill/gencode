@@ -37,7 +37,7 @@ class DifficultyRandom(seed: Long) : Random(seed) {
     fun randInt(min: Int = 0, max: Int = 100) = min + if (min >= max) 0 else nextInt(max - min + 1)
 
     fun simpleInt(): Int {
-        return randInt(1, 25)
+        return randInt(1, 25) //TODO ask simha if 25 is too high
     }
 
     fun randEasyInt(min: Int = 0, max: Int = 100): Int {
