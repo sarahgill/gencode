@@ -9,7 +9,7 @@ import com.troystopera.jkode.vars.VarType
 internal abstract class CodeProvider(val type: ProviderType) {
 
     protected fun genMathOperation(context: GenContext, scope: GenScope, manipulateVar: String, opType: MathOperation.Type): MathOperation<Int, IntVar> {
-        //TODO() better handle division and modulo divide by 0
+        //TODO better handle division and modulo divide by 0
         return if (opType != MathOperation.Type.DIVIDE && opType != MathOperation.Type.MODULO && scope.hasVarType(VarType.INT) && context.random.randHardBool())
             MathOperation(opType, Variable(VarType.INT, manipulateVar), Variable(VarType.INT, scope.getRandVar(VarType.INT)!!))
         else {

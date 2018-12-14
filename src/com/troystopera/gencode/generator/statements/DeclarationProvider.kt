@@ -17,7 +17,7 @@ internal object DeclarationProvider : StatementProvider(ProviderType.DECLARATION
         var count = 0
         val arrays = context.topics.contains(ProblemTopic.ARRAY)
 
-        //declare an array if needed
+        // declare an array if needed
         if (arrays) {
             parent.add(declareArray(scope, context))
             parent.add(declareInt(scope, context))
@@ -37,9 +37,7 @@ internal object DeclarationProvider : StatementProvider(ProviderType.DECLARATION
     private fun declareInt(scope: GenScope, context: GenContext): Declaration<*> {
         val name = context.variableProvider.nextVar()
         scope.addVar(name, VarType.INT)
-        val declaration = Declaration(VarType.INT, name, IntVar[context.random.simpleInt()].asEval())
-        // print("Declaring int - name = $name, initial value = ${declaration.initialValue!!} \n")
-        return declaration
+        return Declaration(VarType.INT, name, IntVar[context.random.simpleInt()].asEval())
 //        return Declaration(
 //                VarType.INT,
 //                name,

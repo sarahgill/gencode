@@ -5,6 +5,7 @@ import com.troystopera.gencode.ProblemTopic
 import com.troystopera.gencode.ProblemType
 import com.troystopera.gencode.generator.components.ConditionalProvider
 import com.troystopera.gencode.generator.components.ForLoopProvider
+import com.troystopera.gencode.generator.constraints.ManipulationConstraints
 import com.troystopera.gencode.generator.statements.DeclarationProvider
 import com.troystopera.gencode.generator.statements.ManipulationProvider
 import com.troystopera.jkode.BlankLine
@@ -14,6 +15,7 @@ import com.troystopera.jkode.components.CodeBlock
 import com.troystopera.jkode.components.ForLoop
 import com.troystopera.jkode.control.Return
 import com.troystopera.jkode.evaluations.ArrayAccess
+import com.troystopera.jkode.evaluations.MathOperation
 import com.troystopera.jkode.evaluations.Variable
 import com.troystopera.jkode.vars.IntVar
 import com.troystopera.jkode.vars.VarType
@@ -69,8 +71,24 @@ class CodeGenerator private constructor(
             val array = context.mainArray!!
             val length = rootRecord.getArrLength(array)
             main.body.add(Return(ArrayAccess(VarType.INT, Variable(VarType.ARRAY, array), IntVar[random.nextInt(length)].asEval())))
-        } else
-            main.body.add(Return(Variable(VarType.INT, context.mainIntVar ?: rootRecord.getRandVar(VarType.INT)!!)))
+        } else {
+            if (ManipulationConstraints.useMathOpInReturnValue(random)) {
+                // randomly choose operation
+                var opType = RandomTypes.operationType(random.difficulty, random)
+                val variable = rootRecord.getRandVar(VarType.INT)!!
+                if (variable.equals(context.mainIntVar!!)) {
+                    while (opType == MathOperation.Type.DIVIDE || opType == MathOperation.Type.MODULO || opType == MathOperation.Type.SUBTRACT) {
+                        opType = RandomTypes.operationType(random.difficulty, random)
+                    }
+                }
+                main.body.add(Return(MathOperation(opType,
+                                    Variable(VarType.INT, context.mainIntVar!!),
+                                    Variable(VarType.INT, variable)))
+                )
+            } else {
+                main.body.add(Return(Variable(VarType.INT, context.mainIntVar ?: rootRecord.getRandVar(VarType.INT)!!)))
+            }
+        }
         builder.setMainFunction(main)
         return builder.build()
     }
@@ -83,7 +101,7 @@ class CodeGenerator private constructor(
                 parent.add(result.component)
                 //setup initial values for temp variables
                 var temp = result.component as CodeBlock
-                var genScope = scope
+                var genScope = result.scope
                 //create proper number of nested loops
                 for (i in 1 until nestStructure.depth) {
                     result = ForLoopProvider.generate(genScope, context)
