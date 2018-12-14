@@ -32,11 +32,8 @@ sealed class NestStructure : Pattern.NestPattern() {
                         else NestedLoopConditional(if (difficulty < 0.75) 2 else 3)
                     }
                     else ->
-                        if (difficulty < 0.25) {
+                        if (difficulty < 0.5) {
                             SingleLoop
-                        } else if (difficulty < 0.50) {
-                            if (random.nextBoolean()) SingleLoop
-                            else NestedLoop(2)
                         } else {
                             NestedLoop(2)
                         }
