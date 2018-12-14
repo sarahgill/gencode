@@ -84,14 +84,14 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
                 else IntVar[0].asEval()
             }
         //default value
-            else -> IntVar[
-                    if (up) {
-                        if (context.random.difficulty < 0.5)
-                            context.random.randInt(3, 5)
-                        else
-                            context.random.randInt(5, 10)
-                    }
-                    else context.random.randInt(0, 2)].asEval()
+        //also make sure that context.random.randInt =! gendeclaration random.randInt
+            else -> IntVar[if (up) {
+                if (context.random.difficulty < 0.5)
+                    context.random.randInt(3, 5)
+                else
+                    context.random.randInt(5, 10)
+            }
+                     else context.random.randInt(0, 2)].asEval()
         }
         return Comparison(type, Variable(VarType.INT, varName), value)
     }
