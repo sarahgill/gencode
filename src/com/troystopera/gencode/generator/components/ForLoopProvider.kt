@@ -56,7 +56,7 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
         //default declaration
         //increase the else randInt to make larger iterations
         //if difficulty level is larger else statement random int (4,8)
-            else -> IntVar[if (up) context.random.randInt(0, 2) else if (context.random.difficulty < 0.5) context.random.randInt(1, 5) else context.random.randInt(5,10)].asEval()
+            else -> IntVar[if (up) context.random.randInt(0, 2) else if (context.random.difficulty < 0.5) context.random.randInt(3, 5) else context.random.randInt(5,10)].asEval()
         }
         return Declaration(VarType.INT, varName, value)
     }
@@ -87,11 +87,11 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
         //also make sure that context.random.randInt =! gendeclaration random.randInt
             else -> IntVar[if (up) {
                 if (context.random.difficulty < 0.5)
-                    context.random.randInt(1, 5)
+                    context.random.randInt(3, 5)
                 else
                     context.random.randInt(5, 10)
             }
-                     else context.random.randInt(0, 3)].asEval()
+                     else context.random.randInt(0, 2)].asEval()
         }
         return Comparison(type, Variable(VarType.INT, varName), value)
     }
