@@ -58,6 +58,8 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
                     if (manip != null) {
                         parent.add(manip)
                         parent.add(forLoopManip(context, scope, manip.varName))
+                    } else {
+                        parent.add(forLoopManip(context, scope))
                     }
                 } else {
                     parent.add(forLoopManip(context, scope))
