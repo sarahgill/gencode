@@ -1,0 +1,29 @@
+buildscript {
+    project.ext.kotlin_version = '1.2.31'
+
+    repositories {
+        maven { url 'http://dl.bintray.com/kotlin/kotlin-1.2' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin-platform-common'
+
+allprojects {
+    group = 'com.troystopera.jkode'
+    version = '1.2.0'
+}
+
+repositories {
+    maven { url 'http://dl.bintray.com/kotlin/kotlin-1.2' }
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-test-annotations-common:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
+}

@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ad74eda7-d847-4b9c-9688-2d22804fe95e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ConditionalProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ConditionalProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ComparisonOverride.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ComparisonOverride.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ForLoopOverride.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ForLoopOverride.kt" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-343899204">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="2" />
+          <entry key="gradle" value="1" />
+          <entry key="java" value="3" />
+          <entry key="kt" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="2" />
+          <entry key="Groovy" value="1" />
+          <entry key="JAVA" value="3" />
+          <entry key="Kotlin" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="9" />
+          <entry key="kt" value="102" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="9" />
+          <entry key="Kotlin" value="102" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ConditionalProvider.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="e#54#549#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/DistractorGenerator.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1260">
+              <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/CodeFormat.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="69" column="43" lean-forward="true" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/JavaFormat.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1500">
+              <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+              <folding>
+                <element signature="e#38#641#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ComparisonOverride.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>genArrayManipulation</find>
+      <find>RandomTypes.</find>
+      <find>formatCodeBlock</find>
+      <find>formatComparison</find>
+      <find>declaration</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/jKode-jvm</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/ManipulationProvider.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ConditionalProvider.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ForLoopOverride.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/util/Caster.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/vars/VarType.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/vars/VarType.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/util/Caster.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/exec/override/Watchable.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ComparisonOverride.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/format/CodeFormat.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/format/JavaFormat.kt" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="721" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
+              <item name="jkode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
+              <item name="jkode" type="462c0819:PsiDirectoryNode" />
+              <item name="format" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+              <item name="com.intellij.database" type="1e004dc1:ScratchProjectViewPane$MyRootNode$1$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+              <item name="com.troystopera.gencode" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+              <item name="com.troystopera.gencode" type="1f31426a:PackageElementNode" />
+              <item name="generator" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+              <item name="com.troystopera.gencode" type="1f31426a:PackageElementNode" />
+              <item name="generator" type="1f31426a:PackageElementNode" />
+              <item name="distractors" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+            </path>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="sun" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="sun" type="1f31426a:PackageElementNode" />
+              <item name="plugin" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Changed Files'; set:Changed Files; ALL; class com.intellij.packageDependencies.ChangeListScope">
+          <expand>
+            <path>
+              <item name="gencode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="gencode" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
+          <expand>
+            <path>
+              <item name="gencode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="gencode" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="gencode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="gencode" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="gencode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="gencode" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="gencode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="gencode" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="troystopera" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="gencode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="gencode" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="troystopera" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="gencode" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="gencode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="gencode" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="troystopera" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="gencode" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="generator" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="gencode" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="gencode" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547678407895" />
+    <property name="settings.editor.selected.configurable" value="project.kotlinCompiler" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
+      <module name="gencode" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 20 FOR_LOOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.troystopera.gencode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
+      <module name="gencode" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 20 FOR_LOOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.troystopera.gencode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
+      <module name="gencode" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 20 FOR_LOOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.troystopera.gencode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
+      <module name="gencode" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 20 FOR_LOOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.troystopera.gencode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
+      <module name="gencode" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 20 FOR_LOOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.troystopera.gencode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main (2)" />
+      <item itemvalue="Application.Main (3)" />
+      <item itemvalue="Application.Main (4)" />
+      <item itemvalue="Application.Main (5)" />
+      <item itemvalue="Application.Main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (5)" />
+        <item itemvalue="Application.Main (4)" />
+        <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.Main (2)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad74eda7-d847-4b9c-9688-2d22804fe95e" name="Default Changelist" comment="" />
+      <created>1543421871795</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543421871795</updated>
+      <workItem from="1543421876441" duration="150000" />
+      <workItem from="1543435102089" duration="50623000" />
+      <workItem from="1545964220295" duration="2963000" />
+      <workItem from="1546526829529" duration="6781000" />
+      <workItem from="1547489641512" duration="480000" />
+      <workItem from="1547579443293" duration="4100000" />
+      <workItem from="1547661302739" duration="2602000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="21257000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="721" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1987076" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27887788" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.43140495" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3272727" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3272727" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.7445743" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.24752475" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.2003339" />
+      <window_info anchor="bottom" id="Analyze Dataflow to" order="13" weight="0.55592656" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2174616" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21157025" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.43140495" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3272727" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3272727" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.7445743" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32561985" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.2003339" />
+      <window_info anchor="bottom" id="Analyze Dataflow to" order="13" weight="0.55592656" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Downloads/proj-3-sarah-devin/Sarah-Gill-proj3/src/chatroom/ChatServer.java" />
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/Component.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/Main.class" />
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/exec/override/Watchable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/evaluations/Comparison.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/VarNameProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="31" column="58" lean-forward="true" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/vars/IntVar.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/DifficultyRandom.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/JFunction.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/Problem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/GenContext.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ComponentProvider.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/constraints/ForLoopConstraints.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/vars/JVar.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/Evaluation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="69" lean-forward="true" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/evaluations/Variable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="79" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/vars/VarType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/evaluations/MathOperation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/exceptions/runtime/NullVarException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/exec/override/OverrideExecutor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/proj-3-sarah-devin/Sarah-Gill-proj3/src/chatroom/ChatClient.java" />
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/statements/ArrayAssign.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/constraints/ManipulationConstraints.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/ManipulationProvider.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/statements/Assignment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/components/CodeBlock.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/components/ForLoop.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle" />
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/DeclarationProvider.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+          <folding>
+            <element signature="e#54#514#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/CodeGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+          <folding>
+            <element signature="e#43#1049#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/GenScope.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/BlankLine.kt" />
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ForLoopProvider.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+          <folding>
+            <element signature="e#54#702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/vars/ArrayVar.kt" />
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ForLoopOverride.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/util/Caster.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/exec/override/Watchable.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/vars/VarType.kt" />
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/vars/VarType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/statements/Assignment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="e#42#251#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jKode-jvm/src/main/kotlin/com/troystopera/jkode/util/Caster.kt" />
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/util/Caster.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jKode-jvm/src/main/kotlin/com/troystopera/jkode/exec/override/Watchable.kt" />
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/BlankLine.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/exec/override/Watchable.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ConditionalProvider.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#54#549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ComparisonOverride.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/DistractorGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/CodeFormat.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="69" column="43" lean-forward="true" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/JavaFormat.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+          <folding>
+            <element signature="e#38#641#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

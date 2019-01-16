@@ -41,7 +41,8 @@ public class Main {
 
             Executor exec = new Executor();
             Output output = exec.execute(problem.getMainFunction());
-            DistractorGenerator dist = new DistractorGenerator(problem);
+            String returnVal = output.getReturnVar().toString();
+            /* DistractorGenerator dist = new DistractorGenerator(problem);
             List<String> distractors = dist.getDistractors(3);
 
             // generate a random number from 0-3 to choose which spot the correct answer goes in list
@@ -58,7 +59,7 @@ public class Main {
             }
             if (rand == 3) {
                 System.out.print(returnVal);
-            }
+            } */
             System.out.println("\nCorrect answer: " + returnVal);
             System.out.println("\n\n");
             problemNum++;
