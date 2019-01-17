@@ -2,11 +2,145 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad74eda7-d847-4b9c-9688-2d22804fe95e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ConditionalProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ConditionalProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ComparisonOverride.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ComparisonOverride.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ForLoopOverride.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ForLoopOverride.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/META-INF/gencode.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/GenerationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/Problem$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/Problem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/ProblemTopic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/ProblemType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/CodeGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/CodeProvider$genIntEvaluation$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/CodeProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/ConstraintsKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/DifficultyRandom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/GenContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/GenScope$History.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/GenScope.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$Companion$ComboLoopConditional.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$Companion$SingleConditional.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$Companion$SingleLoop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$NestedConditional.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$NestedLoop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$NestedLoopConditional.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/Pattern$ArrayWalk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/Pattern$LoopSkipManip.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/Pattern$NestPattern.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/Pattern.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/ProviderType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/RandomTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/VarNameProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/components/ComponentProvider$Companion$WhenMappings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/components/ComponentProvider$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/components/ComponentProvider$Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/components/ComponentProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/components/ConditionalProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/components/ForLoopProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/constraints/ConditionalConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/constraints/ForLoopConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/constraints/ManipulationConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ComparisonOverride$InvertedBoolean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ComparisonOverride$MisreadSignMistake$WhenMappings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ComparisonOverride$MisreadSignMistake.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ComparisonOverride$OrEqualToMistake$WhenMappings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ComparisonOverride$OrEqualToMistake.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ComparisonOverride.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/DistractorGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ForLoopOverride$SkipFirst.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ForLoopOverride.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/statements/DeclarationProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/statements/ManipulationProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/statements/ReturnIntProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/statements/StatementProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/BlankLine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/Component.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/CtrlStmt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/Evaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/JFunction$body$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/JFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/Statement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/CodeBlock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/Conditional$Branch$body$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/Conditional$Branch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/Conditional$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/Conditional$ElseBranch$body$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/Conditional$ElseBranch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/Conditional.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/DoWhileLoop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/ForLoop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/WhileLoop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/control/Break.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/control/Continue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/control/Return.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/ArrayAccess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/ArrayLength.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/Comparison$Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/Comparison$WhenMappings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/Comparison.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/MathOperation$Operable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/MathOperation$Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/MathOperation$WhenMappings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/MathOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/Variable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/JKodeCompileException$Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/JKodeCompileException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/JKodeException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/JKodeRuntimeException$Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/JKodeRuntimeException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/compile/ConflictingDeclarationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/compile/FunctionReturnException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/compile/TypeCastException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/compile/UnknownTokenException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/runtime/ArrayIndexException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/runtime/NullVarException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/CallStack$toString$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/CallStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/Executable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/Executor$ExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/Executor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/MutableCallStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/MutableOutput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/Output.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/Scope$declare$map$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/Scope.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/override/ExecutionOverride.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/override/OverrideExecutor$OverrideNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/override/OverrideExecutor$addOverride$node$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/override/OverrideExecutor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/override/Watchable$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/override/Watchable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/format/CodeFormat$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/format/CodeFormat$WhenMappings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/format/CodeFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/format/JavaFormat$formatCodeBlock$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/format/JavaFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/statements/ArrayAssign.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/statements/Assignment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/statements/Declaration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/util/Caster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/ArrayType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/ArrayVar$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/ArrayVar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/BooleanVar$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/BooleanVar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/IntVar$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/IntVar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/JVar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/JVarEvaluation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/StringVar$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/StringVar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/UnitVar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType$ARRAY$get$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType$ARRAY.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType$BOOLEAN.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType$INT.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType$STRING.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType$UNIT.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,7 +210,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/DistractorGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1260">
-              <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+              <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -85,25 +219,25 @@
         <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="218">
-              <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/CodeFormat.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="69" column="43" lean-forward="true" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
+              <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/CodeFormat.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/JavaFormat.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1500">
-              <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+            <state relative-caret-position="-332">
+              <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
               <folding>
                 <element signature="e#38#641#0" expanded="true" />
               </folding>
@@ -161,7 +295,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="721" />
@@ -176,51 +310,6 @@
           <expand>
             <path>
               <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gencode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gencode" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gencode" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gencode" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="gencode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gencode" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="gencode" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gencode" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="gencode" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gencode" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="gencode" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
               <item name="gencode" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -391,7 +480,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547678407895" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547742258108" />
     <property name="settings.editor.selected.configurable" value="project.kotlinCompiler" />
   </component>
   <component name="RunDashboard">
@@ -510,12 +599,12 @@
       <workItem from="1546526829529" duration="6781000" />
       <workItem from="1547489641512" duration="480000" />
       <workItem from="1547579443293" duration="4100000" />
-      <workItem from="1547661302739" duration="2602000" />
+      <workItem from="1547661302739" duration="4332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21257000" />
+    <option name="totallyTimeSpent" value="22987000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -527,9 +616,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="721" extended-state="0" />
+    <frame x="1" y="23" width="1280" height="721" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1987076" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1292407" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -538,7 +627,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27887788" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41419142" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.43140495" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -869,31 +958,31 @@
     <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/DistractorGenerator.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
-          <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
-          <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/CodeFormat.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="69" column="43" lean-forward="true" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/JavaFormat.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+        <state relative-caret-position="-332">
+          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
           <folding>
             <element signature="e#38#641#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/CodeFormat.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
         </state>
       </provider>
     </entry>
