@@ -73,7 +73,7 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
 
         return Declaration(VarType.INT, varName, value)
     }
-    //TODO make sure gen comparison doesnt equal gen declaration var
+    // TODO make sure gen comparison doesnt equal gen declaration var
     private fun genComparison(varName: String, up: Boolean, context: GenContext, pattern: Pattern?): Comparison<IntVar> {
         val type: Comparison.Type = when (pattern) {
         //array walk comparison

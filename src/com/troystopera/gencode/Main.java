@@ -376,18 +376,17 @@ public class Main {
         int problemNum = 1;
         for (Problem problem : generator.generate(difficultyLow, difficultyHigh, count)) {
             System.out.println("Problem: " + problemNum);
-            System.out.println(JavaFormat.INSTANCE.formatFunction(problem.getMainFunction(), ""));
-
             Executor exec = new Executor();
             Output output = exec.execute(problem.getMainFunction());
             JVar answer = output.getReturnVar();
             // temporary fix for 2d array return values
             while (answer == null) {
+                System.out.println("Regenerating question");
                 problem = generator.generate(problem.getDifficulty());
                 output = exec.execute(problem.getMainFunction());
                 answer = output.getReturnVar();
             }
-
+            System.out.println(JavaFormat.INSTANCE.formatFunction(problem.getMainFunction(), ""));
             System.out.println("Answer: " + answer.toString());
 
             // DistractorGenerator dist = new DistractorGenerator(problem);
