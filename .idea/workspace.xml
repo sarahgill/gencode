@@ -1,146 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="gencode:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ad74eda7-d847-4b9c-9688-2d22804fe95e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/META-INF/gencode.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/GenerationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/Problem$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/Problem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/ProblemTopic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/ProblemType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/CodeGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/CodeProvider$genIntEvaluation$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/CodeProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/ConstraintsKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/DifficultyRandom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/GenContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/GenScope$History.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/GenScope.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$Companion$ComboLoopConditional.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$Companion$SingleConditional.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$Companion$SingleLoop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$NestedConditional.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$NestedLoop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure$NestedLoopConditional.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/NestStructure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/Pattern$ArrayWalk.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/Pattern$LoopSkipManip.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/Pattern$NestPattern.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/Pattern.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/ProviderType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/RandomTypes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/VarNameProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/components/ComponentProvider$Companion$WhenMappings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/components/ComponentProvider$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/components/ComponentProvider$Result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/components/ComponentProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/components/ConditionalProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/components/ForLoopProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/constraints/ConditionalConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/constraints/ForLoopConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/constraints/ManipulationConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ComparisonOverride$InvertedBoolean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ComparisonOverride$MisreadSignMistake$WhenMappings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ComparisonOverride$MisreadSignMistake.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ComparisonOverride$OrEqualToMistake$WhenMappings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ComparisonOverride$OrEqualToMistake.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ComparisonOverride.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/DistractorGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ForLoopOverride$SkipFirst.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/distractors/ForLoopOverride.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/statements/DeclarationProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/statements/ManipulationProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/statements/ReturnIntProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/generator/statements/StatementProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/BlankLine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/Component.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/CtrlStmt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/Evaluation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/JFunction$body$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/JFunction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/Statement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/CodeBlock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/Conditional$Branch$body$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/Conditional$Branch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/Conditional$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/Conditional$ElseBranch$body$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/Conditional$ElseBranch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/Conditional.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/DoWhileLoop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/ForLoop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/components/WhileLoop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/control/Break.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/control/Continue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/control/Return.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/ArrayAccess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/ArrayLength.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/Comparison$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/Comparison$WhenMappings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/Comparison.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/MathOperation$Operable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/MathOperation$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/MathOperation$WhenMappings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/MathOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/evaluations/Variable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/JKodeCompileException$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/JKodeCompileException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/JKodeException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/JKodeRuntimeException$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/JKodeRuntimeException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/compile/ConflictingDeclarationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/compile/FunctionReturnException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/compile/TypeCastException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/compile/UnknownTokenException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/runtime/ArrayIndexException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exceptions/runtime/NullVarException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/CallStack$toString$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/CallStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/Executable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/Executor$ExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/Executor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/MutableCallStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/MutableOutput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/Output.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/Scope$declare$map$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/Scope.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/override/ExecutionOverride.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/override/OverrideExecutor$OverrideNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/override/OverrideExecutor$addOverride$node$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/override/OverrideExecutor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/override/Watchable$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/exec/override/Watchable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/format/CodeFormat$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/format/CodeFormat$WhenMappings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/format/CodeFormat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/format/JavaFormat$formatCodeBlock$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/format/JavaFormat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/statements/ArrayAssign.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/statements/Assignment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/statements/Declaration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/util/Caster.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/ArrayType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/ArrayVar$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/ArrayVar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/BooleanVar$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/BooleanVar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/IntVar$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/IntVar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/JVar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/JVarEvaluation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/StringVar$Companion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/StringVar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/UnitVar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType$ARRAY$get$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType$ARRAY.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType$BOOLEAN.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType$INT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType$STRING.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType$UNIT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gencode/com/troystopera/jkode/vars/VarType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gencode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gencode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/jKode-jvm.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libs/jKode-jvm.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/ProblemTopic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/ProblemTopic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/CodeGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/CodeGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/Constraints.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/Constraints.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/DifficultyRandom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/DifficultyRandom.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/GenScope.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/GenScope.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/NestStructure.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/NestStructure.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ComponentProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ComponentProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ForLoopProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ForLoopProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/DeclarationProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/DeclarationProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/ManipulationProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/ManipulationProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/ReturnIntProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/ReturnIntProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/BlankLine.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/Component.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/CtrlStmt.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/Evaluation.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/JFunction.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/Statement.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/components/CodeBlock.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/components/Conditional.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/components/DoWhileLoop.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/components/ForLoop.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/components/WhileLoop.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/control/Break.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/control/Continue.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/control/Return.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/evaluations/ArrayAccess.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/evaluations/ArrayLength.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/evaluations/Comparison.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/evaluations/MathOperation.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/evaluations/Variable.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exceptions/JKodeCompileException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exceptions/JKodeException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exceptions/JKodeRuntimeException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exceptions/compile/ConflictingDeclarationException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exceptions/compile/FunctionReturnException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exceptions/compile/TypeCastException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exceptions/compile/UnknownTokenException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exceptions/runtime/ArrayIndexException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exceptions/runtime/NullVarException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exec/CallStack.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exec/Executable.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exec/Executor.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exec/MutableCallStack.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exec/MutableOutput.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exec/Output.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exec/Scope.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exec/override/ExecutionOverride.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exec/override/OverrideExecutor.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/exec/override/Watchable.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/format/CodeFormat.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/format/JavaFormat.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/statements/ArrayAssign.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/statements/Assignment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/statements/Declaration.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/util/Caster.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/vars/ArrayVar.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/vars/BooleanVar.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/vars/IntVar.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/vars/JVar.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/vars/JVarEvaluation.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/vars/StringVar.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/vars/UnitVar.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/troystopera/jkode/vars/VarType.kt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -153,30 +96,44 @@
     <session id="-343899204">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="2" />
-          <entry key="gradle" value="1" />
-          <entry key="java" value="3" />
-          <entry key="kt" value="21" />
+          <entry key="bat" value="2" />
+          <entry key="class" value="13" />
+          <entry key="gradle" value="4" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="29" />
+          <entry key="kotlin_builtins" value="3" />
+          <entry key="kt" value="128" />
+          <entry key="md" value="2" />
+          <entry key="properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="3" />
-          <entry key="Kotlin" value="21" />
+          <entry key="CLASS" value="13" />
+          <entry key="Groovy" value="4" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="29" />
+          <entry key="Kotlin" value="128" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Properties" value="1" />
+          <entry key="kotlin_builtins" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="9" />
-          <entry key="kt" value="102" />
+          <entry key="class" value="1" />
+          <entry key="gradle" value="1" />
+          <entry key="java" value="641" />
+          <entry key="kt" value="9205" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9" />
-          <entry key="Kotlin" value="102" />
+          <entry key="CLASS" value="1" />
+          <entry key="Groovy" value="1" />
+          <entry key="JAVA" value="641" />
+          <entry key="Kotlin" value="9205" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -195,74 +152,89 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ConditionalProvider.kt">
+        <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/CodeGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="-1212">
+              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/DeclarationProvider.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="885">
+              <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ForLoopProvider.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="41" column="40" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="40" />
               <folding>
-                <element signature="e#54#549#0" expanded="true" />
+                <element signature="e#54#579#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/DistractorGenerator.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/CodeFormat.kt">
+        <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/JavaFormat.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-332">
-              <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+            <state relative-caret-position="165">
+              <caret line="337" lean-forward="true" selection-start-line="337" selection-end-line="337" />
               <folding>
-                <element signature="e#38#641#0" expanded="true" />
+                <element signature="e#0#15827#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ComparisonOverride.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>genArrayManipulation</find>
-      <find>RandomTypes.</find>
-      <find>formatCodeBlock</find>
-      <find>formatComparison</find>
-      <find>declaration</find>
+      <find>addA</find>
+      <find>context</find>
+      <find>addPattern</find>
+      <find>get</find>
+      <find>context.</find>
+      <find>add</find>
+      <find>main</find>
+      <find>leng</find>
+      <find>?</find>
+      <find>Unit</find>
+      <find>mainArray</find>
+      <find>VarType</find>
+      <find>Unknown State</find>
+      <find>ForLoopProvider</find>
+      <find>getRandVar</find>
+      <find>indent</find>
+      <find>topics</find>
+      <find>Array2D</find>
+      <find>Array_2D</find>
+      <find>genArrayMan</find>
+      <find>For loop</find>
+      <find>Return</find>
+      <find>forLoops</find>
+      <find>genAssignment</find>
+      <find>else</find>
+      <find>CodeGenerator</find>
+      <find>getView</find>
+      <find>example</find>
+      <find>.set</find>
+      <find>distractorGenerator</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/jKode-jvm</dir>
@@ -274,18 +246,37 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/ManipulationProvider.kt" />
         <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ConditionalProvider.kt" />
         <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ForLoopOverride.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/util/Caster.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/vars/VarType.kt" />
-        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/vars/VarType.kt" />
         <option value="$PROJECT_DIR$/src/com/troystopera/jkode/util/Caster.kt" />
         <option value="$PROJECT_DIR$/src/com/troystopera/jkode/exec/override/Watchable.kt" />
         <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ComparisonOverride.kt" />
-        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/Main.java" />
         <option value="$PROJECT_DIR$/src/com/troystopera/jkode/format/CodeFormat.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/ProblemTopic.java" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ComponentProvider.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/Constraints.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/vars/ArrayVar.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/vars/VarType.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/DifficultyRandom.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/vars/Array2DVar.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/NestStructure.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/evaluations/Array2DSize.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/evaluations/Array2DAccess.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/evaluations/ArrayAccess.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/ReturnIntProvider.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/DeclarationProvider.kt" />
         <option value="$PROJECT_DIR$/src/com/troystopera/jkode/format/JavaFormat.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ForLoopProvider.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/GenScope.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/exec/override/ExecutionOverride.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/exec/Output.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/ManipulationProvider.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/jkode/statements/Array2DAssign.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/generator/CodeGenerator.kt" />
+        <option value="$PROJECT_DIR$/src/com/troystopera/gencode/Main.java" />
       </list>
     </option>
   </component>
@@ -295,8 +286,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1" />
+    <option name="y" value="24" />
     <option name="width" value="1280" />
     <option name="height" value="721" />
   </component>
@@ -305,6 +297,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -315,35 +308,73 @@
             <path>
               <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
               <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
               <item name="gencode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gencode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
               <item name="gencode" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
               <item name="gencode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
-              <item name="jkode" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
               <item name="gencode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="troystopera" type="462c0819:PsiDirectoryNode" />
-              <item name="jkode" type="462c0819:PsiDirectoryNode" />
-              <item name="format" type="462c0819:PsiDirectoryNode" />
+              <item name="gencode" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="statements" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gencode" type="b2602c69:ProjectViewProjectNode" />
@@ -359,53 +390,6 @@
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
               <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
               <item name="com.intellij.database" type="1e004dc1:ScratchProjectViewPane$MyRootNode$1$1" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
-              <item name="gencode" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
-              <item name="gencode" type="616d4139:PackageViewModuleNode" />
-              <item name="com.troystopera.gencode" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
-              <item name="gencode" type="616d4139:PackageViewModuleNode" />
-              <item name="com.troystopera.gencode" type="1f31426a:PackageElementNode" />
-              <item name="generator" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
-              <item name="gencode" type="616d4139:PackageViewModuleNode" />
-              <item name="com.troystopera.gencode" type="1f31426a:PackageElementNode" />
-              <item name="generator" type="1f31426a:PackageElementNode" />
-              <item name="distractors" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
-              <item name="gencode" type="616d4139:PackageViewModuleNode" />
-              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
-            </path>
-            <path>
-              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
-              <item name="gencode" type="616d4139:PackageViewModuleNode" />
-              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
-              <item name="sun" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
-              <item name="gencode" type="616d4139:PackageViewModuleNode" />
-              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
-              <item name="sun" type="1f31426a:PackageElementNode" />
-              <item name="plugin" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -475,12 +459,65 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+              <item name="com.troystopera.gencode" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+              <item name="com.troystopera.gencode" type="1f31426a:PackageElementNode" />
+              <item name="generator" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+              <item name="com.troystopera.gencode" type="1f31426a:PackageElementNode" />
+              <item name="generator" type="1f31426a:PackageElementNode" />
+              <item name="distractors" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+            </path>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="sun" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="gencode" type="58d84e3e:PackageViewProjectNode" />
+              <item name="gencode" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+              <item name="sun" type="1f31426a:PackageElementNode" />
+              <item name="plugin" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547742258108" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556500015284" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.kotlinCompiler" />
   </component>
   <component name="RunDashboard">
@@ -495,11 +532,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (2)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
+      <module name="gencode" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 10 ARRAY_2D" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.troystopera.gencode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
       <module name="gencode" />
-      <option name="PROGRAM_PARAMETERS" value="0 1 20 FOR_LOOP" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 10 ARRAY_2D" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.troystopera.gencode.*" />
@@ -513,21 +564,7 @@
     <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
       <module name="gencode" />
-      <option name="PROGRAM_PARAMETERS" value="0 1 20 FOR_LOOP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.troystopera.gencode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
-      <module name="gencode" />
-      <option name="PROGRAM_PARAMETERS" value="0 1 20 FOR_LOOP" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 10 ARRAY" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.troystopera.gencode.*" />
@@ -541,7 +578,7 @@
     <configuration name="Main (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
       <module name="gencode" />
-      <option name="PROGRAM_PARAMETERS" value="0 1 20 FOR_LOOP" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 10 ARRAY_2D" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.troystopera.gencode.*" />
@@ -555,7 +592,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.troystopera.gencode.Main" />
       <module name="gencode" />
-      <option name="PROGRAM_PARAMETERS" value="0 1 20 FOR_LOOP" />
+      <option name="PROGRAM_PARAMETERS" value="0 1 10 ARRAY_2D" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.troystopera.gencode.*" />
@@ -567,19 +604,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main (2)" />
       <item itemvalue="Application.Main (3)" />
-      <item itemvalue="Application.Main (4)" />
       <item itemvalue="Application.Main (5)" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Main (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (5)" />
-        <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (3)" />
-        <item itemvalue="Application.Main (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -604,7 +641,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22987000" />
+    <option name="totallyTimeSpent" value="123860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,9 +653,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1280" height="721" extended-state="6" />
+    <frame x="1" y="24" width="1280" height="721" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1292407" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24474959" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -627,16 +665,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41419142" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21287128" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.43140495" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3272727" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3272727" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.7445743" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.17161717" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.24752475" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.44224423" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.2003339" />
       <window_info anchor="bottom" id="Analyze Dataflow to" order="13" weight="0.55592656" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -650,7 +688,7 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2174616" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24474959" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -659,16 +697,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21157025" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.014851485" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.43140495" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3272727" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3272727" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.7445743" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.17161717" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32561985" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.169967" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.2003339" />
       <window_info anchor="bottom" id="Analyze Dataflow to" order="13" weight="0.55592656" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -689,302 +727,472 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/proj-3-sarah-devin/Sarah-Gill-proj3/src/chatroom/ChatServer.java" />
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/Component.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/Main.class" />
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/exec/override/Watchable.class">
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/components/CodeBlock.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="60">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/evaluations/Comparison.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/VarNameProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="31" column="58" lean-forward="true" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/vars/IntVar.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/DifficultyRandom.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/JFunction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/Problem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/GenContext.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ComponentProvider.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/constraints/ForLoopConstraints.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/vars/JVar.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/Evaluation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="69" lean-forward="true" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/evaluations/Variable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="79" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/vars/VarType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/evaluations/MathOperation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/exceptions/runtime/NullVarException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/exec/override/OverrideExecutor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/proj-3-sarah-devin/Sarah-Gill-proj3/src/chatroom/ChatClient.java" />
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/statements/ArrayAssign.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/constraints/ManipulationConstraints.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/ManipulationProvider.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/statements/Assignment.class">
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/Pattern.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/components/CodeBlock.class">
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/components/ForLoop.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        <state relative-caret-position="60">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/components/ForLoop.class">
+    <entry file="file://$USER_HOME$/Downloads/GoL-template/GameOfLife.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/lab8/lab8.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/lab5/LoopsLab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        <state relative-caret-position="45">
+          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle" />
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/DeclarationProvider.kt">
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/BlankLine.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
-          <folding>
-            <element signature="e#54#514#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/CodeGenerator.kt">
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/ProblemType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-          <folding>
-            <element signature="e#43#1049#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/vars/ArrayType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/GenScope.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/BlankLine.kt" />
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ForLoopProvider.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+        <state relative-caret-position="-415">
+          <caret line="56" column="42" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
           <folding>
-            <element signature="e#54#702#0" expanded="true" />
+            <element signature="e#43#261#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/vars/ArrayVar.kt" />
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ForLoopOverride.kt">
+    <entry file="file://$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/Problem.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/util/Caster.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/exec/override/Watchable.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/troystopera/jkode/vars/VarType.kt" />
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/vars/VarType.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/statements/Assignment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state>
           <folding>
-            <element signature="e#42#251#0" expanded="true" />
+            <element signature="e#0#2539#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jKode-jvm/src/main/kotlin/com/troystopera/jkode/util/Caster.kt" />
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/util/Caster.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jKode-jvm/src/main/kotlin/com/troystopera/jkode/exec/override/Watchable.kt" />
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/BlankLine.kt">
+    <entry file="file://$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/ProblemTopic.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="165">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/statements/ArrayAssign.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#42#374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/exec/Scope.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/exec/override/Watchable.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ConditionalProvider.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="290">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/exec/MutableCallStack.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/exec/Executable.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="35" column="59" lean-forward="true" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/exec/CallStack.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/gencode/com/troystopera/gencode/Main.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1564">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding>
-            <element signature="e#54#549#0" expanded="true" />
+            <element signature="e#0#11656#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/ComparisonOverride.kt">
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/exec/override/ExecutionOverride.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/DistractorGenerator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/JavaFormat.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-332">
-          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+        <state relative-caret-position="165">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
-            <element signature="e#38#641#0" expanded="true" />
+            <element signature="e#45#220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/exec/Output.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <element signature="e#36#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/exec/MutableOutput.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <element signature="e#36#253#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/Problem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/ProblemTopic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/ReturnIntProvider.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#54#525#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/CodeFormat.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
+        <state relative-caret-position="60">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/exec/Executor.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gencode.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/format/JavaFormat.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="116" column="31" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
+          <folding>
+            <element signature="e#38#695#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/evaluations/Array2DAccess.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding>
+            <element signature="e#43#448#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/evaluations/Array2DSize.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#43#249#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/statements/Array2DAssign.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="e#42#376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/vars/ArrayVar.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/jkode/vars/VarType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/components/ForLoopProvider.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="41" column="40" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="40" />
+          <folding>
+            <element signature="e#54#579#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com/troystopera/jkode/CtrlStmt.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com.troystopera.jkode/BlankLine.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvmORIG.jar!/com/troystopera/jkode/BlankLine.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com.troystopera.jkode/vars/Array2DType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jKode-jvm.jar!/com.troystopera.jkode/vars/Array2DVar.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/CodeGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1212">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/DeclarationProvider.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/statements/ManipulationProvider.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2745">
+          <caret line="200" column="9" lean-forward="true" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/generator/distractors/DistractorGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#55#448#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troystopera/gencode/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="337" lean-forward="true" selection-start-line="337" selection-end-line="337" />
+          <folding>
+            <element signature="e#0#15827#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>gencode:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android-Gradle</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>gencode</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jKode-jvm</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
