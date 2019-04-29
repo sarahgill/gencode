@@ -1,14 +1,12 @@
 package com.troystopera.gencode.generator.components
 
+import com.troystopera.gencode.ProblemTopic
 import com.troystopera.gencode.generator.*
 import com.troystopera.gencode.generator.GenScope
 import com.troystopera.gencode.generator.constraints.ForLoopConstraints
 import com.troystopera.jkode.Evaluation
 import com.troystopera.jkode.components.ForLoop
-import com.troystopera.jkode.evaluations.ArrayLength
-import com.troystopera.jkode.evaluations.Comparison
-import com.troystopera.jkode.evaluations.MathOperation
-import com.troystopera.jkode.evaluations.Variable
+import com.troystopera.jkode.evaluations.*
 import com.troystopera.jkode.statements.Assignment
 import com.troystopera.jkode.statements.Declaration
 import com.troystopera.jkode.vars.IntVar
@@ -19,7 +17,7 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
     override fun generate(scope: GenScope, context: GenContext): Result {
         val varName = context.variableProvider.nextVar()
         val newScope = scope.createChildScope(ForLoop::class)
-        val pattern = createPattern(varName, newScope)
+        val pattern = createPattern(varName, newScope, context)
         if (pattern != null) {
             newScope.addPattern(pattern)
             if (pattern is Pattern.ArrayWalk)
@@ -36,17 +34,23 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
         return Result(loop, arrayOf(loop), newScope)
     }
 
-    fun createPattern(intName: String, scope: GenScope): Pattern? { //only happens if there is ARRAY questions requested
-        //array walk
-        if (scope.hasVarType(VarType.ARRAY[VarType.INT]) && !scope.hasPattern(Pattern.ArrayWalk::class)) {
-            val array = scope.getRandVar(VarType.ARRAY[VarType.INT])!!
+    fun createPattern(intName: String, scope: GenScope, context: GenContext): Pattern? { //only happens if there is ARRAY questions requested
+        // array walk
+        if ((scope.hasVarType(VarType.ARRAY[VarType.INT]) || scope.hasVarType(VarType.ARRAY2D[VarType.INT]))
+                && !scope.hasPattern(Pattern.ArrayWalk::class)) {
+            val array = if (context.topics.contains(ProblemTopic.ARRAY_2D)) {
+                scope.getRandVar(VarType.ARRAY2D[VarType.INT])!!
+            } else {
+                    scope.getRandVar(VarType.ARRAY[VarType.INT])!!
+                }
             return Pattern.ArrayWalk(array, intName)
         }
+
         return null
     }
 
     private fun genDeclaration(varName: String, up: Boolean, context: GenContext, pattern: Pattern?): Declaration<IntVar> {
-        //TODO utilize other variables in loop declaration
+        // TODO utilize other variables in loop declaration
         val value: Evaluation<IntVar> = when (pattern) {
             //array walk declaration if you are working with arrays and for_loops this sets it = 0 if up or array length if down
             is Pattern.ArrayWalk -> {
@@ -55,7 +59,6 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
             }
             //default declaration
             //increase the else randInt to make larger iterations
-            //TODO ask simha if 10 loops is too many
             else -> IntVar[if (up)
                 context.random.randInt(0, 2)
             else if (context.random.difficulty < 0.25)
@@ -90,8 +93,13 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
         val value: Evaluation<IntVar> = when (pattern) {
         //array walk values
             is Pattern.ArrayWalk -> {
-                if (up) ArrayLength(Variable(VarType.ARRAY, pattern.arrayName))
-                else IntVar[0].asEval()
+                if (context.topics.contains(ProblemTopic.ARRAY_2D)) {
+                    if (up) Array2DSize(Variable(VarType.ARRAY2D, pattern.arrayName))
+                    else IntVar[0].asEval()
+                } else {
+                    if (up) ArrayLength(Variable(VarType.ARRAY, pattern.arrayName))
+                    else IntVar[0].asEval()
+                }
             }
         //default value
         //also make sure that context.random.randInt =! gendeclaration random.randInt //maybe make when statement

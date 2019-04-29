@@ -14,6 +14,7 @@ import com.troystopera.jkode.JFunction
 import com.troystopera.jkode.components.CodeBlock
 import com.troystopera.jkode.components.ForLoop
 import com.troystopera.jkode.control.Return
+import com.troystopera.jkode.evaluations.Array2DAccess
 import com.troystopera.jkode.evaluations.ArrayAccess
 import com.troystopera.jkode.evaluations.MathOperation
 import com.troystopera.jkode.evaluations.Variable
@@ -70,7 +71,18 @@ class CodeGenerator private constructor(
         if (context.mainArray != null) {
             val array = context.mainArray!!
             val length = rootRecord.getArrLength(array)
-            main.body.add(Return(ArrayAccess(VarType.INT, Variable(VarType.ARRAY, array), IntVar[random.nextInt(length)].asEval())))
+            if (context.topics.contains(ProblemTopic.ARRAY_2D)) {
+                val rowLength = rootRecord.getArr2DRowLength(array)
+                val colLength = rootRecord.getArr2DColLength(array)
+                main.body.add(Return(Array2DAccess(
+                        VarType.INT,
+                        Variable(VarType.ARRAY2D[VarType.INT], array),
+                        IntVar[random.nextInt(rowLength)].asEval(),
+                        IntVar[random.nextInt(colLength)].asEval())
+                ))
+            } else {
+                main.body.add(Return(ArrayAccess(VarType.INT, Variable(VarType.ARRAY, array), IntVar[random.nextInt(length)].asEval())))
+            }
         } else {
             if (ManipulationConstraints.useMathOpInReturnValue(random)) {
                 // randomly choose operation

@@ -16,6 +16,7 @@ internal abstract class ComponentProvider(type: ProviderType) : CodeProvider(typ
                 ProblemTopic.FOR_LOOP -> ForLoopProvider
                 ProblemTopic.CONDITIONAL -> ConditionalProvider
                 ProblemTopic.ARRAY -> throw IllegalArgumentException("No statements for arrays")
+                ProblemTopic.ARRAY_2D -> throw IllegalArgumentException("No statements for arrays")
             }
         }
 
@@ -24,6 +25,7 @@ internal abstract class ComponentProvider(type: ProviderType) : CodeProvider(typ
                 ProblemTopic.FOR_LOOP -> true
                 ProblemTopic.CONDITIONAL -> true
                 ProblemTopic.ARRAY -> false
+                ProblemTopic.ARRAY_2D -> false
             }
         }
 

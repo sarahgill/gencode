@@ -4,17 +4,17 @@ import com.troystopera.gencode.GenerationException
 import com.troystopera.gencode.ProblemTopic
 import com.troystopera.gencode.generator.*
 import com.troystopera.gencode.generator.GenScope
-import com.troystopera.gencode.generator.VarNameProvider
 import com.troystopera.gencode.generator.constraints.ForLoopConstraints
 import com.troystopera.gencode.generator.constraints.ManipulationConstraints
-import com.troystopera.jkode.Component
 import com.troystopera.jkode.Evaluation
 import com.troystopera.jkode.components.CodeBlock
 import com.troystopera.jkode.components.ForLoop
 import com.troystopera.jkode.evaluations.ArrayAccess
+import com.troystopera.jkode.evaluations.Array2DAccess
 import com.troystopera.jkode.evaluations.MathOperation
 import com.troystopera.jkode.evaluations.Variable
 import com.troystopera.jkode.statements.ArrayAssign
+import com.troystopera.jkode.statements.Array2DAssign
 import com.troystopera.jkode.statements.Assignment
 import com.troystopera.jkode.vars.IntVar
 import com.troystopera.jkode.vars.VarType
@@ -31,26 +31,35 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
         if (scope.hasPattern(Pattern.ArrayWalk::class)) {
             val arrayWalk = scope.getPattern(Pattern.ArrayWalk::class)!! as Pattern.ArrayWalk
             if (ManipulationConstraints.useDirectManipulation(context.random)) {
-                parent.add(ArrayAssign(
-                        Variable(VarType.ARRAY[VarType.INT], arrayWalk.arrayName),
-                        Variable(VarType.INT, arrayWalk.index),
-                        Variable(VarType.INT, arrayWalk.index)
-                ))
+                if (context.topics.contains(ProblemTopic.ARRAY_2D)) {
+                    parent.add(genArray2DManipulation(null, scope, context, parent))
+                } else {
+                    parent.add(ArrayAssign(
+                            Variable(VarType.ARRAY[VarType.INT], arrayWalk.arrayName),
+                            Variable(VarType.INT, arrayWalk.index),
+                            Variable(VarType.INT, arrayWalk.index)
+                    ))
+                }
                 count++
             } else {
+                // System.out.println("Testing")
                 //manipulate an int that may be used by the array assign
                 val assign = forLoopManip(context, scope)
                 parent.add(assign)
-                parent.add(ArrayAssign(
-                        Variable(VarType.ARRAY[VarType.INT], arrayWalk.arrayName),
-                        Variable(VarType.INT, arrayWalk.index),
-                        Variable(VarType.INT, assign.varName)
-                ))
+                if (context.topics.contains(ProblemTopic.ARRAY_2D)) {
+                    parent.add(genArray2DManipulation(null, scope, context, parent))
+                } else {
+                    parent.add(ArrayAssign(
+                            Variable(VarType.ARRAY[VarType.INT], arrayWalk.arrayName),
+                            Variable(VarType.INT, arrayWalk.index),
+                            Variable(VarType.INT, assign.varName)
+                    ))
+                }
                 count += 2
             }
         }
 
-        //manipulate the return var if present and not in an array walk
+        // manipulate the return var if present and not in an array walk
         if (!scope.hasPattern(Pattern.ArrayWalk::class) && context.mainIntVar != null) {
             if (scope.isIn(ForLoop::class)) {
                 if (ForLoopConstraints.haveMultipleStatements(context.random)) {
@@ -72,10 +81,13 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
 
         while (count < MIN_OPERATIONS || (count < MAX_OPERATIONS && context.random.randHardBool())) {
             val manipulateVar = scope.getRandVar(VarType.INT)!!
-            //potentially manipulate an array with 33% probability
-            if (context.random.randBool(.33) && context.topics.contains(ProblemTopic.ARRAY) && scope.hasVarType(VarType.ARRAY[VarType.INT]))
+            // potentially manipulate an array with 33% probability
+            if (context.random.randBool(.33) && context.topics.contains(ProblemTopic.ARRAY) && scope.hasVarType(VarType.ARRAY[VarType.INT])) {
                 parent.add(genArrayManipulation(null, scope, context))
-            //standard int manipulation
+            } else if (context.topics.contains(ProblemTopic.ARRAY_2D) && scope.hasVarType(VarType.ARRAY2D[VarType.INT])) {
+                parent.add(genArray2DManipulation(null, scope, context, parent))
+            }
+            // standard int manipulation
             else
                 parent.add(Assignment(manipulateVar, genIntEvaluation(context, scope, manipulateVar)))
             count++
@@ -104,6 +116,47 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
                         ArrayAccess(VarType.INT,
                                 Variable(VarType.ARRAY[VarType.INT], srcArr),
                                 IntVar[srcIndex].asEval()
+                        )
+                )
+            }
+        }
+    }
+
+    private fun genArray2DManipulation(i: Evaluation<IntVar>?, scope: GenScope, context: GenContext, parent: CodeBlock): Array2DAssign<*> {
+        val arr = scope.getRandVar(VarType.ARRAY2D[VarType.INT])!!
+        val rowIndex = i ?: IntVar[context.random.randEasyInt(0, scope.getArr2DRowLength(arr) - 1)].asEval()
+        val colIndex = i ?: IntVar[context.random.randEasyInt(0, scope.getArr2DColLength(arr) - 1)].asEval()
+
+        if (ForLoopConstraints.haveMultipleStatements(context.random)) {
+            val manip = forLoopManip2(context, scope)
+            if (manip != null) {
+                parent.add(manip)
+                parent.add(forLoopManip(context, scope, manip.varName))
+            } else {
+                parent.add(forLoopManip(context, scope))
+            }
+        } else {
+            parent.add(forLoopManip(context, scope))
+        }
+
+        return when {
+            context.random.randBool() && scope.hasVarType(VarType.INT) -> {
+                Array2DAssign(
+                        Variable(VarType.ARRAY2D[VarType.INT], arr),
+                        rowIndex, colIndex,
+                        Variable(VarType.INT, scope.getRandVar(VarType.INT)!!)
+                )
+            } else -> {
+                val srcArr = scope.getRandVar(VarType.ARRAY2D[VarType.INT])!!
+                val srcRowIndex = context.random.randEasyInt(0, scope.getArr2DRowLength(arr) - 1)
+                val srcColIndex = context.random.randEasyInt(0, scope.getArr2DColLength(srcArr) - 1)
+                Array2DAssign(
+                        Variable(VarType.ARRAY2D[VarType.INT], arr),
+                        rowIndex, colIndex,
+                        Array2DAccess(VarType.INT,
+                                Variable(VarType.ARRAY2D[VarType.INT], srcArr),
+                                IntVar[srcRowIndex].asEval(),
+                                IntVar[srcColIndex].asEval()
                         )
                 )
             }

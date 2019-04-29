@@ -6,6 +6,7 @@ import com.troystopera.gencode.generator.GenScope
 import com.troystopera.jkode.components.CodeBlock
 import com.troystopera.jkode.control.Return
 import com.troystopera.jkode.evaluations.ArrayAccess
+import com.troystopera.jkode.evaluations.Array2DAccess
 import com.troystopera.jkode.evaluations.Variable
 import com.troystopera.jkode.vars.IntVar
 import com.troystopera.jkode.vars.VarType
@@ -15,7 +16,19 @@ internal object ReturnIntProvider : StatementProvider(ProviderType.RETURN) {
     override fun populate(parent: CodeBlock, scope: GenScope, context: GenContext) {
         //TODO add history for returned array variables
         //50% chance of array access if possible
-        if (context.random.randBool() && context.topics.contains(ProblemTopic.ARRAY) && scope.hasVarType(VarType.ARRAY[VarType.INT])) {
+        if (context.topics.contains(ProblemTopic.ARRAY_2D)) {// && scope.hasVarType(VarType.ARRAY2D[VarType.INT])) {
+            System.out.println("Return type will be 2d array")
+            val arrName = scope.getRandVar(VarType.ARRAY2D)
+            val length = scope.getArrLength(arrName!!)
+            parent.add(
+                    Return(Array2DAccess(
+                            VarType.INT,
+                            Variable(VarType.ARRAY2D[VarType.INT], arrName),
+                            IntVar[context.random.randInt(0, length - 1)].asEval(),
+                            IntVar[context.random.randInt(0, length - 1)].asEval())
+                    )
+            )
+        } else if (context.random.randBool() && context.topics.contains(ProblemTopic.ARRAY) && scope.hasVarType(VarType.ARRAY[VarType.INT])) {
             val arrName = scope.getRandVar(VarType.INT)
             val length = scope.getArrLength(arrName!!)
             parent.add(

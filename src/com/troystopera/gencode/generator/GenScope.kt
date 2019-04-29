@@ -2,6 +2,7 @@ package com.troystopera.gencode.generator
 
 import com.troystopera.jkode.Component
 import com.troystopera.jkode.vars.ArrayType
+import com.troystopera.jkode.vars.Array2DType
 import com.troystopera.jkode.vars.VarType
 import java.util.*
 import kotlin.reflect.KClass
@@ -17,6 +18,8 @@ class GenScope private constructor(
 
     private val vars = hashMapOf<String, VarType<*>>()
     private val arrayLengths = hashMapOf<String, Int>()
+    private val array2DRowLength = hashMapOf<String, Int>()
+    private val array2DColLength = hashMapOf<String, Int>()
     private val exclude = hashSetOf<String>()
     private val patterns = mutableListOf<Pattern>()
 
@@ -48,6 +51,12 @@ class GenScope private constructor(
         arrayLengths.put(name, length)
     }
 
+    fun add2DArrVar(name: String, type: Array2DType<*>, rowNum: Int, colNum: Int) {
+        vars.put(name, type)
+        array2DRowLength.put(name, rowNum)
+        array2DColLength.put(name, colNum)
+    }
+
     fun addVar(name: String, type: VarType<*>, enableManipulation: Boolean = true) {
         vars.put(name, type)
         if (!enableManipulation) exclude.add(name)
@@ -55,6 +64,14 @@ class GenScope private constructor(
 
     fun getArrLength(name: String): Int {
         return arrayLengths[name] ?: 0
+    }
+
+    fun getArr2DRowLength(name: String): Int {
+        return array2DRowLength[name] ?: 0
+    }
+
+    fun getArr2DColLength(name: String): Int {
+        return array2DColLength[name] ?: 0
     }
 
     fun hasVar(name: String): Boolean = vars.minus(exclude).contains(name) || parent?.hasVar(name) ?: false
