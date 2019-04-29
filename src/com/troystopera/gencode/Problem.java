@@ -28,6 +28,8 @@ public class Problem implements Comparable<Problem> {
         return mainFunction;
     }
 
+    public double getDifficulty() { return difficulty; }
+
     public List<JFunction> getFunctions() {
         return functions;
     }
