@@ -378,22 +378,23 @@ public class Main {
             System.out.println("Problem: " + problemNum);
             System.out.println(JavaFormat.INSTANCE.formatFunction(problem.getMainFunction(), ""));
 
-//            Executor exec = new Executor();
-//            Output output = exec.execute(problem.getMainFunction());
             Executor exec = new Executor();
             Output output = exec.execute(problem.getMainFunction());
             JVar answer = output.getReturnVar();
-            // get rid of this:
-            if (answer != null) {
-                System.out.println("Answer: " + answer.toString());
-            } else {
-                System.out.println("Could not find answer for this problem");
+            // temporary fix for 2d array return values
+            while (answer == null) {
+                problem = generator.generate(problem.getDifficulty());
+                output = exec.execute(problem.getMainFunction());
+                answer = output.getReturnVar();
             }
+
+            System.out.println("Answer: " + answer.toString());
+
             // DistractorGenerator dist = new DistractorGenerator(problem);
             // List<String> distractors = dist.getDistractors(3);
             // generate a random number from 0-3 to choose which spot the correct answer goes in list
             // int rand = (int) (Math.random() * 4);
-            count = 0;
+            // count = 0;
             // String returnVal = output.getReturnVar().toString();
             // System.out.print("Answer choices: ");
             /* for (String s: distractors) {
