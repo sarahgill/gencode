@@ -1,10 +1,12 @@
 package com.troystopera.gencode.generator.components
 
+import com.sun.tools.javah.Gen
 import com.troystopera.gencode.ProblemTopic
 import com.troystopera.gencode.generator.*
 import com.troystopera.gencode.generator.GenScope
 import com.troystopera.gencode.generator.constraints.ForLoopConstraints
 import com.troystopera.jkode.Evaluation
+import com.troystopera.jkode.components.CodeBlock
 import com.troystopera.jkode.components.ForLoop
 import com.troystopera.jkode.evaluations.*
 import com.troystopera.jkode.statements.Assignment
@@ -16,46 +18,79 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
 
     override fun generate(scope: GenScope, context: GenContext): Result {
         val varName = context.variableProvider.nextVar()
+        var set2DPattern = false
         val newScope = scope.createChildScope(ForLoop::class)
-        val pattern = createPattern(varName, newScope, context)
+        var pattern = createPattern(varName, newScope, context)
+        val varName2 = context.variableProvider.nextVar()
+        if (context.topics.contains(ProblemTopic.ARRAY_2D)) {
+            pattern = createPattern(varName, varName2, newScope, context)
+            newScope.addVar(varName2, VarType.INT, false)
+        }
         if (pattern != null) {
             newScope.addPattern(pattern)
-            if (pattern is Pattern.ArrayWalk)
+            if (pattern is Pattern.ArrayWalk) {
                 context.mainArray = pattern.arrayName
+            } else if (pattern is Pattern.Array2DWalk){
+                set2DPattern = true
+                context.mainArray = pattern.arrayName
+            }
         }
         newScope.addVar(varName, VarType.INT, false)
 
+        var col = false
         val up = ForLoopConstraints.useIncrease(context.random, pattern)
         val loop = ForLoop(
-                genDeclaration(varName, up, context, pattern),
-                genComparison(varName, up, context, pattern),
+                genDeclaration(varName, up, context, pattern, scope, col),
+                genComparison(varName, up, context, pattern, scope, col),
                 genAssignment(varName, up, context, scope, pattern)
         )
+        if (newScope.hasPattern(Pattern.Array2DWalk::class) && set2DPattern) {
+            col = true
+            val innerLoop = ForLoop(
+                    genDeclaration(varName2, up, context, pattern, scope, col),
+                    genComparison(varName2, up, context, pattern, scope, col),
+                    genAssignment(varName2, up, context, scope, pattern)
+            )
+            loop.add(innerLoop)
+        }
+
         return Result(loop, arrayOf(loop), newScope)
     }
 
-    fun createPattern(intName: String, scope: GenScope, context: GenContext): Pattern? { //only happens if there is ARRAY questions requested
+    fun createPattern(intName: String, scope: GenScope, context: GenContext): Pattern? {
         // array walk
-        if ((scope.hasVarType(VarType.ARRAY[VarType.INT]) || scope.hasVarType(VarType.ARRAY2D[VarType.INT]))
-                && !scope.hasPattern(Pattern.ArrayWalk::class)) {
-            val array = if (context.topics.contains(ProblemTopic.ARRAY_2D)) {
-                scope.getRandVar(VarType.ARRAY2D[VarType.INT])!!
-            } else {
-                    scope.getRandVar(VarType.ARRAY[VarType.INT])!!
-                }
+        if ((scope.hasVarType(VarType.ARRAY[VarType.INT])) && !scope.hasPattern(Pattern.ArrayWalk::class)
+                && context.topics.contains(ProblemTopic.ARRAY)) {
+            val array = scope.getRandVar(VarType.ARRAY[VarType.INT])!!
             return Pattern.ArrayWalk(array, intName)
         }
 
         return null
     }
 
-    private fun genDeclaration(varName: String, up: Boolean, context: GenContext, pattern: Pattern?): Declaration<IntVar> {
+    fun createPattern(rowIntName: String, colIntName: String, scope: GenScope, context: GenContext): Pattern? {
+        if (scope.hasVarType(VarType.ARRAY2D[VarType.INT]) && !scope.hasPattern(Pattern.Array2DWalk::class)
+            && context.topics.contains(ProblemTopic.ARRAY_2D)) {
+            val array2d = scope.getRandVar(VarType.ARRAY2D[VarType.INT])!!
+            return Pattern.Array2DWalk(array2d, rowIntName, colIntName)
+        }
+
+        return null
+    }
+
+    private fun genDeclaration(varName: String, up: Boolean, context: GenContext, pattern: Pattern?, scope: GenScope, col: Boolean): Declaration<IntVar> {
         // TODO utilize other variables in loop declaration
         val value: Evaluation<IntVar> = when (pattern) {
             //array walk declaration if you are working with arrays and for_loops this sets it = 0 if up or array length if down
             is Pattern.ArrayWalk -> {
                 if (up) IntVar[0].asEval()
                 else MathOperation(MathOperation.Type.SUBTRACT, ArrayLength(Variable(VarType.ARRAY, pattern.arrayName)), IntVar[1].asEval())
+            }
+
+            is Pattern.Array2DWalk -> {
+                if (up) IntVar[0].asEval()
+                else if (col) IntVar[scope.getArr2DColLength(pattern.arrayName) - 1].asEval()
+                else MathOperation(MathOperation.Type.SUBTRACT, Array2DSize(Variable(VarType.ARRAY2D, pattern.arrayName)), IntVar[1].asEval())
             }
             //default declaration
             //increase the else randInt to make larger iterations
@@ -74,10 +109,14 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
         return Declaration(VarType.INT, varName, value)
     }
     // TODO make sure gen comparison doesnt equal gen declaration var
-    private fun genComparison(varName: String, up: Boolean, context: GenContext, pattern: Pattern?): Comparison<IntVar> {
+    private fun genComparison(varName: String, up: Boolean, context: GenContext, pattern: Pattern?, scope: GenScope, col: Boolean): Comparison<IntVar> {
         val type: Comparison.Type = when (pattern) {
         //array walk comparison
             is Pattern.ArrayWalk -> {
+                if (up) Comparison.Type.LESS_THAN
+                else Comparison.Type.GREATER_THAN_EQUAL_TO
+            }
+            is Pattern.Array2DWalk -> {
                 if (up) Comparison.Type.LESS_THAN
                 else Comparison.Type.GREATER_THAN_EQUAL_TO
             }
@@ -93,16 +132,14 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
         val value: Evaluation<IntVar> = when (pattern) {
         //array walk values
             is Pattern.ArrayWalk -> {
-                if (context.topics.contains(ProblemTopic.ARRAY_2D)) {
-                    if (up) Array2DSize(Variable(VarType.ARRAY2D, pattern.arrayName))
-                    else IntVar[0].asEval()
-                } else {
-                    if (up) ArrayLength(Variable(VarType.ARRAY, pattern.arrayName))
-                    else IntVar[0].asEval()
-                }
+                if (up) ArrayLength(Variable(VarType.ARRAY, pattern.arrayName))
+                else IntVar[0].asEval()
             }
-        //default value
-        //also make sure that context.random.randInt =! gendeclaration random.randInt //maybe make when statement
+            is Pattern.Array2DWalk -> {
+                if (col && up) IntVar[scope.getArr2DColLength(pattern.arrayName)].asEval()
+                else if (up) Array2DSize(Variable(VarType.ARRAY2D, pattern.arrayName))
+                else IntVar[0].asEval()
+            }
             else -> IntVar[if (up) {
 
                 if (context.random.difficulty < 0.25)
@@ -123,6 +160,10 @@ internal object ForLoopProvider : ComponentProvider(ProviderType.FOR_LOOP) {
         val varVariable = Variable(VarType.INT, varName)
         return when {
             pattern is Pattern.ArrayWalk -> {
+                if (up) Assignment(varName, MathOperation(MathOperation.Type.ADD, varVariable, IntVar[1].asEval()))
+                else Assignment(varName, MathOperation(MathOperation.Type.SUBTRACT, varVariable, IntVar[1].asEval()))
+            }
+            pattern is Pattern.Array2DWalk -> {
                 if (up) Assignment(varName, MathOperation(MathOperation.Type.ADD, varVariable, IntVar[1].asEval()))
                 else Assignment(varName, MathOperation(MathOperation.Type.SUBTRACT, varVariable, IntVar[1].asEval()))
             }

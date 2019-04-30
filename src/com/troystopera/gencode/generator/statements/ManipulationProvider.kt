@@ -28,12 +28,20 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
         var count = 0
 
         //start by checking for an array generation pattern
-        if (scope.hasPattern(Pattern.ArrayWalk::class)) {
-            val arrayWalk = scope.getPattern(Pattern.ArrayWalk::class)!! as Pattern.ArrayWalk
+        if (scope.hasPattern(Pattern.ArrayWalk::class) || scope.hasPattern(Pattern.Array2DWalk::class)) {
             if (ManipulationConstraints.useDirectManipulation(context.random)) {
                 if (context.topics.contains(ProblemTopic.ARRAY_2D)) {
-                    parent.add(genArray2DManipulation(null, scope, context, parent))
+                    val array2DWalk = scope.getPattern(Pattern.Array2DWalk::class)!! as Pattern.Array2DWalk
+
+                    parent.add(Array2DAssign(
+                      Variable(VarType.ARRAY2D[VarType.INT], array2DWalk.arrayName),
+                            Variable(VarType.INT, array2DWalk.rowIndex),
+                            Variable(VarType.INT, array2DWalk.colIndex),
+                            Variable(VarType.INT, array2DWalk.rowIndex)
+                            // Variable(VarType.INT, scope.getRandVar(VarType.INT)
+                    ))
                 } else {
+                    val arrayWalk = scope.getPattern(Pattern.ArrayWalk::class)!! as Pattern.ArrayWalk
                     parent.add(ArrayAssign(
                             Variable(VarType.ARRAY[VarType.INT], arrayWalk.arrayName),
                             Variable(VarType.INT, arrayWalk.index),
@@ -42,13 +50,21 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
                 }
                 count++
             } else {
-                // System.out.println("Testing")
                 //manipulate an int that may be used by the array assign
                 val assign = forLoopManip(context, scope)
                 parent.add(assign)
                 if (context.topics.contains(ProblemTopic.ARRAY_2D)) {
-                    parent.add(genArray2DManipulation(null, scope, context, parent))
+                    val array2DWalk = scope.getPattern(Pattern.Array2DWalk::class)!! as Pattern.Array2DWalk
+                    // parent.add(genArray2DManipulation(null, scope, context, parent))
+                    parent.add(Array2DAssign(
+                            Variable(VarType.ARRAY2D[VarType.INT], array2DWalk.arrayName),
+                            Variable(VarType.INT, array2DWalk.rowIndex),
+                            Variable(VarType.INT, array2DWalk.colIndex),
+                            Variable(VarType.INT, assign.varName)
+                            // Variable(VarType.INT, scope.getRandVar(VarType.INT)
+                    ))
                 } else {
+                    val arrayWalk = scope.getPattern(Pattern.ArrayWalk::class)!! as Pattern.ArrayWalk
                     parent.add(ArrayAssign(
                             Variable(VarType.ARRAY[VarType.INT], arrayWalk.arrayName),
                             Variable(VarType.INT, arrayWalk.index),
@@ -60,7 +76,7 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
         }
 
         // manipulate the return var if present and not in an array walk
-        if (!scope.hasPattern(Pattern.ArrayWalk::class) && context.mainIntVar != null) {
+        if (!scope.hasPattern(Pattern.ArrayWalk::class) && !scope.hasPattern(Pattern.Array2DWalk::class) && context.mainIntVar != null) {
             if (scope.isIn(ForLoop::class)) {
                 if (ForLoopConstraints.haveMultipleStatements(context.random)) {
                     val manip = forLoopManip2(context, scope)
@@ -148,7 +164,7 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
                 )
             } else -> {
                 val srcArr = scope.getRandVar(VarType.ARRAY2D[VarType.INT])!!
-                val srcRowIndex = context.random.randEasyInt(0, scope.getArr2DRowLength(arr) - 1)
+                val srcRowIndex = context.random.randEasyInt(0, scope.getArr2DRowLength(srcArr) - 1)
                 val srcColIndex = context.random.randEasyInt(0, scope.getArr2DColLength(srcArr) - 1)
                 Array2DAssign(
                         Variable(VarType.ARRAY2D[VarType.INT], arr),

@@ -379,13 +379,13 @@ public class Main {
             Executor exec = new Executor();
             Output output = exec.execute(problem.getMainFunction());
             JVar answer = output.getReturnVar();
-            // temporary fix for 2d array return values
-            while (answer == null) {
-                System.out.println("Regenerating question");
-                problem = generator.generate(problem.getDifficulty());
-                output = exec.execute(problem.getMainFunction());
-                answer = output.getReturnVar();
-            }
+            // temporary fix for 2d array return values:
+//            while (answer == null) {
+//                System.out.println("Answer is null");
+//                problem = generator.generate(problem.getDifficulty());
+//                output = exec.execute(problem.getMainFunction());
+//                answer = output.getReturnVar();
+//            }
             System.out.println(JavaFormat.INSTANCE.formatFunction(problem.getMainFunction(), ""));
             System.out.println("Answer: " + answer.toString());
 
