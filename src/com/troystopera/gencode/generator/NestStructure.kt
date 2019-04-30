@@ -23,8 +23,8 @@ sealed class NestStructure : Pattern.NestPattern() {
         fun get(topics: HashSet<out ProblemTopic>, difficulty: Double, random: Random): NestStructure {
             return when {
                 topics.contains(ProblemTopic.ARRAY_2D) -> when {
-                    difficulty < 0.5 -> NestedLoop(2)
-                    else -> NestedLoop(3)
+                    difficulty <= 1.0 -> NestedLoop(1)
+                    else -> NestedLoop(2)
                 }
                 topics.contains(ProblemTopic.FOR_LOOP) -> when {
                     topics.contains(ProblemTopic.ARRAY) -> when {
@@ -32,8 +32,8 @@ sealed class NestStructure : Pattern.NestPattern() {
                         else -> NestedLoop(2)
                     }
                     topics.contains(ProblemTopic.ARRAY_2D) -> when {
-                        difficulty < 0.5 -> NestedLoop(2)
-                        else -> NestedLoop(3)
+                        difficulty <= 1.0 -> NestedLoop(1)
+                        else -> NestedLoop(2)
                     }
                     topics.contains(ProblemTopic.CONDITIONAL) -> {
                         if (difficulty < 0.25) ComboLoopConditional

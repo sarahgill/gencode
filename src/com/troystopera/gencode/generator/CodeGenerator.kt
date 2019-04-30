@@ -121,8 +121,12 @@ class CodeGenerator private constructor(
                     temp = result.component as ForLoop
                     genScope = result.scope
                 }
-                //populate innermost loop
-                ManipulationProvider.populate(temp, genScope, context)
+                if (genScope.hasPattern(Pattern.Array2DWalk::class)) {
+                    val innerLoop = temp.getExecutables().get(0) as CodeBlock
+                    ManipulationProvider.populate(innerLoop, genScope, context)
+                } else {
+                    ManipulationProvider.populate(temp, genScope, context)
+                }
             }
 
             is NestStructure.NestedConditional -> {
