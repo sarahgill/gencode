@@ -26,6 +26,10 @@ sealed class NestStructure : Pattern.NestPattern() {
                     difficulty <= 1.0 -> NestedLoop(1)
                     else -> NestedLoop(2)
                 }
+                topics.contains(ProblemTopic.WHILE) -> when {
+                    difficulty <= 1.0 -> SingleLoop
+                    else -> SingleLoop
+                }
                 topics.contains(ProblemTopic.FOR_LOOP) -> when {
                     topics.contains(ProblemTopic.ARRAY) -> when {
                         difficulty < 0.50 -> SingleLoop

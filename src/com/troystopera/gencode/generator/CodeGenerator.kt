@@ -8,6 +8,7 @@ import com.troystopera.gencode.generator.components.ForLoopProvider
 import com.troystopera.gencode.generator.constraints.ManipulationConstraints
 import com.troystopera.gencode.generator.statements.DeclarationProvider
 import com.troystopera.gencode.generator.statements.ManipulationProvider
+import com.troystopera.gencode.generator.components.WhileLoopProvider
 import com.troystopera.jkode.BlankLine
 import com.troystopera.jkode.Component
 import com.troystopera.jkode.JFunction
@@ -181,9 +182,15 @@ class CodeGenerator private constructor(
             }
 
             NestStructure.Companion.SingleLoop -> {
-                val result = ForLoopProvider.generate(scope, context)
-                parent.add(result.component)
-                ManipulationProvider.populate(result.component as CodeBlock, result.scope, context)
+                if (context.topics.contains(ProblemTopic.WHILE)) {
+                    val whileLoopResult = WhileLoopProvider.generate(scope, context)
+                    parent.add(whileLoopResult.component)
+                    ManipulationProvider.populate(whileLoopResult.component as CodeBlock, whileLoopResult.scope, context)
+                } else {
+                    val forLoopResult = ForLoopProvider.generate(scope, context)
+                    parent.add(forLoopResult.component)
+                    ManipulationProvider.populate(forLoopResult.component as CodeBlock, forLoopResult.scope, context)
+                }
             }
 
             NestStructure.Companion.SingleConditional -> {
