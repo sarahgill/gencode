@@ -9,6 +9,7 @@ import com.troystopera.gencode.generator.constraints.ManipulationConstraints
 import com.troystopera.jkode.Evaluation
 import com.troystopera.jkode.components.CodeBlock
 import com.troystopera.jkode.components.ForLoop
+import com.troystopera.jkode.components.WhileLoop
 import com.troystopera.jkode.evaluations.ArrayAccess
 import com.troystopera.jkode.evaluations.Array2DAccess
 import com.troystopera.jkode.evaluations.MathOperation
@@ -75,8 +76,10 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
             }
         }
 
-        // manipulate the return var if present and not in an array walk
-        if (!scope.hasPattern(Pattern.ArrayWalk::class) && !scope.hasPattern(Pattern.Array2DWalk::class) && context.mainIntVar != null) {
+        if (context.topics.contains(ProblemTopic.WHILE)) {
+            val whileLoop = parent as WhileLoop
+            parent.add(whileLoop.assignment)
+        } else if (!scope.hasPattern(Pattern.ArrayWalk::class) && !scope.hasPattern(Pattern.Array2DWalk::class) && context.mainIntVar != null) {
             if (scope.isIn(ForLoop::class)) {
                 if (ForLoopConstraints.haveMultipleStatements(context.random)) {
                     val manip = forLoopManip2(context, scope)
@@ -95,7 +98,7 @@ internal object ManipulationProvider : StatementProvider(ProviderType.MANIPULATI
             count++
         }
 
-        while (count < MIN_OPERATIONS || (count < MAX_OPERATIONS && context.random.randHardBool())) {
+        while (!context.topics.contains(ProblemTopic.WHILE) && (count < MIN_OPERATIONS || (count < MAX_OPERATIONS && context.random.randHardBool()))) {
             val manipulateVar = scope.getRandVar(VarType.INT)!!
             // potentially manipulate an array with 33% probability
             if (context.random.randBool(.33) && context.topics.contains(ProblemTopic.ARRAY) && scope.hasVarType(VarType.ARRAY[VarType.INT])) {
