@@ -52,7 +52,7 @@ sealed class NestStructure : Pattern.NestPattern() {
                 }
                 topics.contains(ProblemTopic.CONDITIONAL) -> when {
                     difficulty < 0.50 -> SingleConditional
-                    difficulty < 0.75 -> NestedConditional(2)
+                    difficulty < 0.90 -> NestedConditional(2)
                     else -> NestedConditional(if (random.nextBoolean()) 2 else 3)
                 }
                 else -> get(hashSetOf(ProblemTopic.FOR_LOOP), difficulty, random)
